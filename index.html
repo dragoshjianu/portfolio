@@ -30,23 +30,23 @@
 			</div>
 			<button class="nav-toggle" aria-label="toggle navigation">
 				<span class="hamburger"></span>
-				<nav class="nav">
-					<ul class="nav__list">
-						<li class="nav__item">
-							<a href="#home" class="nav__link">Acasa</a>
-						</li>
-						<li class="nav__item">
-							<a href="#services" class="nav__link">Servicii</a>
-						</li>
-						<li class="nav__item">
-							<a href="#about" class="nav__link">Despre Mine</a>
-						</li>
-						<li class="nav__item">
-							<a href="#work" class="nav__link">Portofoliu</a>
-						</li>
-					</ul>
-				</nav>
 			</button>
+			<nav class="nav">
+				<ul class="nav__list">
+					<li class="nav__item">
+						<a href="#home" class="nav__link">Acasa</a>
+					</li>
+					<li class="nav__item">
+						<a href="#services" class="nav__link">Servicii</a>
+					</li>
+					<li class="nav__item">
+						<a href="#about" class="nav__link">Despre Mine</a>
+					</li>
+					<li class="nav__item">
+						<a href="#work" class="nav__link">Portofoliu</a>
+					</li>
+				</ul>
+			</nav>
 		</header>
 
 		<!-- Introducere - Hero Area -->
@@ -58,12 +58,13 @@
 			<img
 				src="./assets/img/dragos-primary-photo.jpg"
 				alt="fotografie cu Dragos Jianu"
+				class="intro__img"
 			/>
 		</section>
 
 		<!-- Servicii -->
-		<section class="services" id="services">
-			<h2 class="section__title section__title--services">Cu ce ma ocup</h2>
+		<section class="my-services" id="services">
+			<h2 class="section__title section__title--services">Servicii</h2>
 			<div class="services">
 				<div class="service">
 					<h3>Design + Development</h3>
@@ -106,20 +107,38 @@
 		<!-- Despre Mine -->
 		<section class="about-me" id="about">
 			<h2 class="section__title section__title--about">Cine sunt eu</h2>
-			<p class="section__subtitle section__subtitle--about"></p>
+			<p class="section__subtitle section__subtitle--about">
+				Front-End Developer in ascensiune
+			</p>
 
 			<div class="about-me__body">
-				<p></p>
-				<p></p>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit labore
+					commodi excepturi qui placeat, id debitis. Dolores tempora quos totam.
+					Veritatis maiores pariatur nulla deserunt recusandae in accusantium,
+					modi at!
+				</p>
+				<p>
+					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa
+					corrupti ducimus ratione beatae asperiores, illum excepturi minus a,
+					nesciunt nisi laudantium officiis id? Adipisci in dolor excepturi, ut
+					incidunt nobis.
+				</p>
 			</div>
 
-			<img src="./assets/img/secondaryPicture.png" alt="alta poza cu Dragos" />
+			<img
+				src="./assets/img/secondaryPicture.png"
+				alt="alta poza cu Dragos"
+				class="about-me__img"
+			/>
 		</section>
 
 		<!-- Portofoliu -->
 		<section class="my-work" id="work">
-			<h2 class="section__title">Portofoliu</h2>
-			<p class="section__subtitle"></p>
+			<h2 class="section__title section__title__work">Portofoliu</h2>
+			<p class="section__subtitle section__subtitle--work">
+				O selectie cu lucrarile mele
+			</p>
 
 			<div class="portfolio">
 				<!-- portfolio item 01 -->
@@ -206,24 +225,34 @@
 		</section>
 
 		<!-- footer -->
-		<footer>
+		<footer class="footer">
 			<a href="mailto:dragosh.jianu@gmail.com" class="footer__link"
 				>dragosh.jianu@gmail.com</a
 			>
 			<ul class="social-list">
-				<li class="socila-list__item">
-					<a href="" class="socila-list__link">a</a>
+				<li class="social-list__item">
+					<a href="" class="socila-list__link">
+						<i class="fab fa-codepen"></i>
+					</a>
 				</li>
-				<li class="socila-list__item">
-					<a href="" class="socila-list__link">b</a>
+				<li class="social-list__item">
+					<a href="" class="socila-list__link">
+						<i class="fab fa-dribbble"></i>
+					</a>
 				</li>
-				<li class="socila-list__item">
-					<a href="" class="socila-list__link">c</a>
+				<li class="social-list__item">
+					<a href="" class="socila-list__link">
+						<i class="fab fa-twitter"></i>
+					</a>
 				</li>
-				<li class="socila-list__item">
-					<a href="" class="socila-list__link">d</a>
+				<li class="social-list__item">
+					<a href="" class="socila-list__link">
+						<i class="fab fa-github"></i>
+					</a>
 				</li>
 			</ul>
 		</footer>
+
+		<script src="./assets/js/index.js"></script>
 	</body>
 </html>
