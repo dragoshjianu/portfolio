@@ -1,0 +1,97 @@
+.mobile-img {
+	display: none;
+}
+
+.card {
+	display: flex;
+	align-items: stretch;
+	justify-content: center;
+	border-radius: 10px;
+	overflow: hidden;
+	background-color: $card-background;
+	max-width: 1140px;
+	margin: 5%;
+}
+
+.card-text-part {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 6%;
+
+	.block {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 100%;
+		width: 85%;
+	}
+
+	h1 {
+		color: $main-heading;
+		font-size: 3.4rem;
+		margin-bottom: 2.8rem;
+		line-height: 4.2rem;
+		letter-spacing: 0.6px;
+	}
+
+	span {
+		color: $accent;
+	}
+
+	.text {
+		color: $main-paragraph;
+		font-size: 1.4rem;
+		line-height: 2.4rem;
+		letter-spacing: 0.5px;
+	}
+}
+
+.stats {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 4rem;
+}
+
+.stat-block {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+.stat-num {
+	color: $main-heading;
+	font-weight: bold;
+	font-size: 2.2rem;
+}
+
+.stat-title {
+	color: $stat-heading;
+	text-transform: uppercase;
+	letter-spacing: 0.1rem;
+	font-size: 1.2rem;
+	font-family: "Lexend Deca" sans-serif;
+	margin-top: 0.8rem;
+}
+
+.card-image-part {
+	background-color: $accent;
+	position: relative;
+}
+
+img {
+	height: 100%;
+	mix-blend-mode: multiply;
+	display: block;
+}
+
+.pink {
+	background-color: $accent;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0.25;
+}

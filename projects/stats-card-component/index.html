@@ -12,32 +12,52 @@
 			href="./images/favicon-32x32.png"
 		/>
 
-		<link rel="stylesheet" href="./css/style.css" />
+		<!-- <link rel="stylesheet" href="/dist/styles.css" /> -->
+		<link rel="stylesheet" href="./css/styles.css" />
 
 		<title>Frontend Mentor | Stats preview card component</title>
 	</head>
 	<body>
-		<section class="card">
-			<picture class="card__image">
-				<source
-					media="(min-width: 768px)"
-					srcset="./images/image-header-desktop.jpg"
-				/>
-				<img src="./images/image-header-mobile.jpg" alt="a cute kitten" />
-			</picture>
-			<div class="card__body">
-				<h2 class="card__heading">
-					Get <span class="card__heading--highlighted">insights</span> that help
-					your business grow.
-				</h2>
-				<p class="card__info">
-					Discover the benefits of data analytics and make better decisions
-					regarding revenue, customer experience, and overall efficiency.
-				</p>
-				<div class="card__stats">
-					<p>10k+ <span class="card__stats--stat">companies</span></p>
-					<p>314 <span class="card__stats--stat">templates</span></p>
-					<p>12m+ <span class="card__stats--stat">queries</span></p>
+		<section class="container">
+			<div class="card">
+				<div class="card-text-part">
+					<div class="block">
+						<h1>
+							Get <span class="highlighted">insights</span> that help your
+							business grow.
+						</h1>
+						<p class="text">
+							Discover the benefits of data analytics and make better decisions
+							regarding revenue, customer experience, and overall efficiency.
+						</p>
+						<div class="stats">
+							<div class="stat-block">
+								<div class="stat-num">10k+</div>
+								<div class="stat-title">Companies</div>
+							</div>
+							<div class="stat-block">
+								<div class="stat-num">314</div>
+								<div class="stat-title">Templates</div>
+							</div>
+							<div class="stat-block">
+								<div class="stat-num">12M+</div>
+								<div class="stat-title">Queries</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card-image-part">
+					<img
+						class="desktop-img"
+						src="./images/image-header-desktop.jpg"
+						alt="hero-img"
+					/>
+					<img
+						class="mobile-img"
+						src="./images/image-header-mobile.jpg"
+						alt="hero-img"
+					/>
+					<div class="pink"></div>
 				</div>
 			</div>
 		</section>

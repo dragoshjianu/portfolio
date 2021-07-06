@@ -1,0 +1,54 @@
+@media screen and (max-width: 375px) {
+	.container {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.card {
+		display: flex;
+		flex-direction: column;
+		max-width: 88%;
+	}
+
+	.stats {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.stat-block {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin: 1.6rem;
+	}
+
+	.card-image-part {
+		order: 1;
+	}
+
+	.desktop-img {
+		display: none;
+	}
+	.mobile-img {
+		display: block;
+		width: 100%;
+	}
+
+	.card-text-part {
+		order: 2;
+
+		h1 {
+			font-size: 2.6em;
+			text-align: center;
+			line-height: 3.6rem;
+			margin-bottom: 1.2rem;
+		}
+
+		.text {
+			text-align: center;
+			width: 100%;
+		}
+	}
+}
