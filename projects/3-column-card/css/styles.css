@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+:root {
+	/* Colors */
+	/* Primary */
+	--clr-bright-orange: hsl(31, 77%, 52%);
+	--clr-dark-cyan: hsl(184, 100%, 22%);
+	--clr-very-dark-cyan: hsl(179, 100%, 13%);
+
+	/* Neutral */
+
+	--clr-transparent-white: hsla(0, 0%, 100%, 0.75); /* paragraphs */
+	--clr-very-light-grey: hsl(0, 0%, 95%);
+
+	--ff-body: "Lexend Deca", sans-serif;
+	--ff-heading: "Big Shoulders Display", cursive;
+
+	--fs-body: 1.5rem;
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	background-color: var(--clr-very-light-grey);
+	font-family: var(--ff-body);
+	font-size: var(--fs-body);
+	padding: 15% 0;
+}
+
+.container {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 5%;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.card__column {
+	padding: 5rem 3rem;
+	max-width: 250px;
+	position: relative;
+}
+
+.card__column > * {
+	margin-bottom: 2.5rem;
+}
+
+.card__column--sedan {
+	background-color: var(--clr-bright-orange);
+}
+.card__column--suv {
+	background-color: var(--clr-dark-cyan);
+}
+.card__column--luxury {
+	background-color: var(--clr-very-dark-cyan);
+}
+
+.card__icon {
+	transform-origin: center left;
+	transform: scale(0.85);
+}
+
+.card__heading {
+	font-family: var(--ff-heading);
+	font-size: 3.6rem;
+	color: var(--clr-very-light-grey);
+	font-weight: 700;
+	text-transform: uppercase;
+	opacity: 0.89;
+}
+.card__text {
+	color: var(--clr-transparent-white);
+	font-size: 1.2rem;
+	line-height: 2.2rem;
+	letter-spacing: 0.2px;
+	opacity: 0.8;
+}
+
+.btn {
+	background-color: var(--clr-very-light-grey);
+	padding: 10px 25px;
+	border-radius: 50px;
+	font-size: 1.2rem;
+	text-decoration: none;
+}
+
+.btn--sedan {
+	color: var(--clr-bright-orange);
+}
+.btn--suv {
+	color: var(--clr-dark-cyan);
+}
+.btn--luxury {
+	color: var(--clr-very-dark-cyan);
+}
+
+@media screen and (min-width: 750px) {
+	body {
+		height: 100vh;
+	}
+	.container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.card {
+		display: flex;
+		flex-direction: row;
+		max-width: 750px;
+	}
+}
+@media screen and (min-width: 1140px) {
+	.card {
+		display: flex;
+		flex-direction: row;
+		max-width: 750px;
+	}
+
+	.card__column {
+		padding: 5%;
+		max-width: 250px;
+	}
+
+	.card__text {
+		margin-bottom: 80px;
+		letter-spacing: 0.6px;
+	}
+}
