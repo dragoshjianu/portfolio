@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,700;1,400&display=swap");
 *,
 *::before,
 *::after {
@@ -7,228 +7,177 @@
   box-sizing: border-box;
 }
 
+.model-mobile {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  z-index: -1;
+  opacity: 0.5;
+}
+
 html {
   font-size: 62.5%;
 }
 
 body {
-  font-family: "Inter", sans-serif;
-  background-color: #090b1a;
-}
-
-.container {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.mobile-img {
-  display: none;
-}
-
-.card {
-  display: flex;
-  align-items: stretch;
-  justify-content: center;
-  border-radius: 10px;
-  overflow: hidden;
-  background-color: #192238;
-  max-width: 1140px;
-  margin: 5%;
-}
-
-.card-text-part {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 6%;
-}
-
-.card-text-part .block {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-  width: 85%;
-}
-
-.card-text-part h1 {
-  color: white;
-  font-size: 3.4rem;
-  margin-bottom: 2.8rem;
-  line-height: 4.2rem;
-  letter-spacing: 0.6px;
-}
-
-.card-text-part span {
-  color: #aa5cdb;
-}
-
-.card-text-part .text {
-  color: rgba(255, 255, 255, 0.75);
-  font-size: 1.4rem;
-  line-height: 2.4rem;
-  letter-spacing: 0.5px;
-}
-
-.stats {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 4rem;
-}
-
-.stat-block {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.stat-num {
-  color: white;
-  font-weight: bold;
-  font-size: 2.2rem;
-}
-
-.stat-title {
-  color: rgba(255, 255, 255, 0.6);
-  text-transform: uppercase;
-  letter-spacing: 0.1rem;
-  font-size: 1.2rem;
-  font-family: "Lexend Deca" sans-serif;
-  margin-top: 0.8rem;
-}
-
-.card-image-part {
-  background-color: #aa5cdb;
+  font-family: "Space Mono", monospace;
+  font-size: 1.6rem;
+  background-color: #c5e4e7;
   position: relative;
 }
 
-img {
-  height: 100%;
-  mix-blend-mode: multiply;
+input[class*="input"] {
+  background-color: #c5e4e7;
+  color: #00494d;
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-align: right;
+  font-family: "Space Mono", monospace;
+  padding: 0.4rem 3rem 0.4rem 0;
+  margin-top: 0.5rem;
+  border: none;
+  width: 100%;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  opacity: 0.5;
+}
+
+.container .header {
+  margin-bottom: 3.5rem;
+  margin-top: 5rem;
+}
+
+.card {
+  background-color: #f4fafa;
+  color: #5e7a7d;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 3rem 3.1rem;
+  width: 100%;
+}
+
+.card__left, .card__right {
+  width: 100%;
+}
+
+.card-item {
+  margin-bottom: 3.3rem;
+}
+
+.card__heading {
+  width: 100%;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.card__amount--input {
+  background-image: url(/projects/tip-calculator-app/images/icon-dollar.svg);
+  background-repeat: no-repeat;
+  background-position: 3rem 50%;
+}
+
+.card__people--input {
+  background-image: url(/projects/tip-calculator-app/images/icon-person.svg);
+  background-repeat: no-repeat;
+  background-position: 3rem 50%;
+}
+
+.card__tips {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 1.1rem;
+}
+
+.card__tips .card__heading {
+  margin-bottom: 1.6rem;
+}
+
+.card__tips .card__tip {
+  background-color: #00494d;
+  color: #f4fafa;
+  font-size: 2.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.6rem;
+  padding: 0.6rem 2.5rem;
+  border-radius: 5px;
+  width: calc(50% - 1rem);
+}
+
+.card__tips .card__tip--input {
+  margin-bottom: 1.6rem;
+  padding: 0.6rem 2.5rem;
+  border-radius: 5px;
+  width: calc(50% - 1rem);
+}
+
+.card__tips .card__tip--input::placeholder {
+  color: #00494d;
+}
+
+.card__tips .card__tip:nth-of-type(2n + 1) {
+  margin-right: 1.6rem;
+}
+
+.card__right {
+  padding: 3rem 1.7rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #00494d;
+  color: white;
+  border-radius: 20px;
+  width: 100%;
+}
+
+.card__right .card__tip-amount {
+  margin-top: 1rem;
+}
+
+.card__right .card__tip-amount,
+.card__right .card__total-amount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.6rem;
+}
+
+.card__right .card__tip-amount--sum,
+.card__right .card__total-amount--sum {
+  font-size: 3.6rem;
+  color: #26c0ab;
+}
+
+.card__right .card__tip-amount span,
+.card__right .card__total-amount span {
   display: block;
 }
 
-.pink {
-  background-color: #aa5cdb;
+.card__right .card__total-amount {
+  margin-bottom: 2.6rem;
+}
+
+.card__right .btn {
+  background-color: #26c0ab;
+  color: #00494d;
+  text-transform: uppercase;
+  font-family: "Space Mono", monospace;
   width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0.25;
+  font-size: 2rem;
+  padding: 1rem 0;
+  border-radius: 10px;
 }
 
-@media screen and (max-width: 1050px) {
-  .stat-title {
-    font-size: 1.1rem;
-  }
-  .card-text-part .block {
-    width: 100%;
-  }
-  .card-text-part .h1 {
-    font-size: 3.2rem;
-    line-height: 3.8rem;
-    margin-bottom: 2rem;
-  }
-  .card-text-part .text {
-    width: 100%;
-    font-size: 1.6rem;
-    line-height: 2.4rem;
-    letter-spacing: 0.5px;
-  }
-}
-
-@media screen and (max-width: 980px) {
-  .container {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .card {
-    display: flex;
-    flex-direction: column;
-    max-width: 78%;
-  }
-  .stats {
-    flex-wrap: wrap;
-  }
-  .stat-block {
-    display: flex;
-    flex-direction: column;
-    margin: 1.6rem;
-  }
-  .card-image-part {
-    order: 1;
-  }
-  .desktop-img {
-    display: none;
-  }
-  .mobile-img {
-    display: block;
-    width: 100%;
-  }
-  .card-text-part {
-    order: 2;
-  }
-  .card-text-part h1 {
-    font-size: 3.4em;
-    line-height: 4.2rem;
-    margin-bottom: 3rem;
-    letter-spacing: 0.6px;
-  }
-  .card-text-part .text {
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 375px) {
-  .container {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .card {
-    display: flex;
-    flex-direction: column;
-    max-width: 88%;
-  }
-  .stats {
-    display: flex;
-    flex-direction: column;
-  }
-  .stat-block {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 1.6rem;
-  }
-  .card-image-part {
-    order: 1;
-  }
-  .desktop-img {
-    display: none;
-  }
-  .mobile-img {
-    display: block;
-    width: 100%;
-  }
-  .card-text-part {
-    order: 2;
-  }
-  .card-text-part h1 {
-    font-size: 2.6em;
-    text-align: center;
-    line-height: 3.6rem;
-    margin-bottom: 1.2rem;
-  }
-  .card-text-part .text {
-    text-align: center;
-    width: 100%;
-  }
+.hidden {
+  display: none;
 }
 /*# sourceMappingURL=styles.css.map */
