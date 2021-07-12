@@ -17,43 +17,65 @@
 		<title>Tip Calculator | Frontend Mentor</title>
 	</head>
 	<body>
-    <img src="./-downloaded/design/mobile-design.jpg" class="model-mobile" alt="">
 		<section class="container">
 			<header class="header">
 				<img src="./images/logo.svg" alt="Calculator logo" role="heading" />
 			</header>
 			<main class="card">
-          <div class="card__left">
+				<div class="card__left">
 					<div class="card__amount card-item">
-						<label for="amount-input" class="card__heading ">Bill</label>
-						<input type="number" class="card__amount--input" id="amount-input" placeholder="142.55" />
+						<label for="amount-input" class="card__heading">Bill</label>
+						<input
+							type="number"
+							class="card__amount--input"
+							id="amount-input"
+							placeholder="0"
+							value="142.55"
+						/>
 					</div>
-          <div class="card__tips card-item">
-            <label for="custom-tip" class="card__heading">Select Tip %</label>
-            <span class="card__tip" data-tip="5">5%</span>
-            <span class="card__tip" data-tip="10">10%</span>
-            <span class="card__tip" data-tip="15">15%</span>
-            <span class="card__tip" data-tip="25">25%</span>
-            <span class="card__tip" data-tip="50">50%</span>
-            <input type="number" class="card__tip--input" id="custom-tip" data-tip="custom" placeholder="Custom">
-          </div>
-          <div class="card__people card-item">
-            <label for="card-people" class="card__heading">Number of People</p>
-            <input type="number" class="card__people--input" id="card-people" placeholder="0">
-          </div>
+					<div class="card__tips card-item">
+						<label for="custom-tip" class="card__heading">Select Tip %</label>
+						<span class="card__tip" data-tip="5">5%</span>
+						<span class="card__tip" data-tip="10">10%</span>
+						<span class="card__tip" data-tip="15">15%</span>
+						<span class="card__tip" data-tip="25">25%</span>
+						<span class="card__tip" data-tip="50">50%</span>
+						<input
+							type="number"
+							class="card__tip--input"
+							id="custom-tip"
+							data-tip="custom"
+							placeholder="Custom"
+						/>
+					</div>
+					<div class="card__people card-item">
+						<label for="card-people" class="card__heading"
+							>Number of People</label
+						>
+						<input
+							type="number"
+							class="card__people--input"
+							id="card-people"
+							placeholder="0"
+							value="5"
+						/>
+					</div>
 				</div>
 				<div class="card__right">
-          <div class="card__tip-amount">
-            <p class="card__tip-amount--label">Tip Amount <span> / person</span></p>
-            <p class="card__tip-amount--sum">$0.00</p>
-          </div>
-          <div class="card__total-amount">
-            <p class="card__total-amount--label">Total <span> / person</span></p>
-            <p class="card__total-amount--sum">$0.00</p>
-          </div>
-          <button class="btn">Reset</button>
-        </div>
-				
+					<div class="card__tip-amount">
+						<p class="card__tip-amount--label">
+							Tip Amount <span> / person</span>
+						</p>
+						<p class="card__tip-amount--sum">$0.00</p>
+					</div>
+					<div class="card__total-amount">
+						<p class="card__total-amount--label">
+							Total <span> / person</span>
+						</p>
+						<p class="card__total-amount--sum">$0.00</p>
+					</div>
+					<button class="btn">Reset</button>
+				</div>
 			</main>
 		</section>
 	</body>

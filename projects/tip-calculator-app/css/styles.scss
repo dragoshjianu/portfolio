@@ -31,16 +31,6 @@ $clr-white: hsl(0, 0%, 100%);
 	box-sizing: border-box;
 }
 
-//Models
-.model-mobile {
-	position: absolute;
-	top: 0;
-	left: 0;
-	min-width: 100vw;
-	z-index: -1;
-	opacity: 0.5;
-}
-
 //Universal
 html {
 	font-size: 62.5%;
@@ -53,160 +43,57 @@ body {
 	position: relative;
 }
 
-input[class*="input"] {
-	background-color: $clr-light-grayish-cyan-1;
-	color: $clr-very-dark-cyan;
-	font-size: $fs-form;
-	font-weight: 700;
-	text-align: right;
-	font-family: $ff-space-mono;
-	padding: 0.4rem 3rem 0.4rem 0;
-	margin-top: 0.5rem;
-	border: none;
-	width: 100%;
-}
-
-//Layout
 .container {
-	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 	align-items: center;
-	justify-content: flex-start;
-	opacity: 0.5;
 
 	.header {
-		margin-bottom: 3.5rem;
-		margin-top: 5rem;
+		margin: 5rem 0;
 	}
-}
 
-.card {
-	background-color: $clr-light-grayish-cyan-2;
-	color: $clr-dark-grayish-cyan-2;
-	border-radius: 20px;
-	overflow: hidden;
-	padding: 3rem 3.1rem;
-	width: 100%;
-
-	&__left,
-	&__right {
+	.card {
+		background-color: $clr-white;
+		color: $clr-dark-grayish-cyan-1;
+		border-radius: 2rem;
+		padding: 4rem 2.5rem;
 		width: 100%;
-	}
 
-	&-item {
-		margin-bottom: 3.3rem;
-	}
-
-	&__heading {
-		width: 100%;
-		display: block;
-		margin-bottom: 0.5rem;
-	}
-
-	&__amount {
-		&--input {
-			background-image: url(/projects/tip-calculator-app/images/icon-dollar.svg);
-			background-repeat: no-repeat;
-			background-position: 3rem 50%;
-		}
-	}
-
-	&__people {
-		&--input {
-			background-image: url(/projects/tip-calculator-app/images/icon-person.svg);
-			background-repeat: no-repeat;
-			background-position: 3rem 50%;
-		}
-	}
-
-	&__tips {
-		display: flex;
-		flex-direction: row;
-		justify-content: flex-start;
-		flex-wrap: wrap;
-		margin-bottom: 1.1rem;
-
-		& .card__heading {
-			margin-bottom: 1.6rem;
+		&__left {
+			padding: 0 0.8rem;
 		}
 
-		.card__tip {
-			background-color: $clr-very-dark-cyan;
-			color: $clr-light-grayish-cyan-2;
-			font-size: $fs-form;
+		&-item {
 			display: flex;
-			justify-content: center;
-			align-items: center;
-			margin-bottom: 1.6rem;
-			padding: 0.6rem 2.5rem;
-			border-radius: 5px;
-			width: calc(50% - 1rem);
-
-			&--input {
-				margin-bottom: 1.6rem;
-				padding: 0.6rem 2.5rem;
-				border-radius: 5px;
-				width: calc(50% - 1rem);
-
-				&::placeholder {
-					color: $clr-very-dark-cyan;
-				}
-			}
-		}
-		.card__tip:nth-of-type(2n + 1) {
-			margin-right: 1.6rem;
-		}
-	}
-
-	&__right {
-		padding: 3rem 1.7rem;
-		display: flex;
-		flex-direction: column;
-		background-color: $clr-very-dark-cyan;
-		color: $clr-white;
-		border-radius: 20px;
-		width: 100%;
-
-		& .card__tip-amount {
-			margin-top: 1rem;
-		}
-
-		.card__tip-amount,
-		.card__total-amount {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			margin-bottom: 1.6rem;
-
-			&--sum {
-				font-size: 3.6rem;
-				color: $clr-strong-cyan;
-			}
-
-			& span {
-				display: block;
-			}
-		}
-
-		.card__total-amount {
-			margin-bottom: 2.6rem;
-		}
-
-		& .btn {
-			background-color: $clr-strong-cyan;
-			color: $clr-very-dark-cyan;
-			text-transform: uppercase;
-			font-family: $ff-space-mono;
+			flex-direction: column;
+			margin-bottom: 4rem;
 			width: 100%;
-			font-size: 2rem;
-			padding: 1rem 0;
-			border-radius: 10px;
+
+			& > * {
+				display: block;
+				width: 100%;
+			}
+		}
+
+		&__amount .card__heading,
+		&__people .card__heading {
+			margin-bottom: 1.2rem;
+		}
+
+		&__tips .card__heading {
+			margin-bottom: 2.2rem;
+		}
+
+		& input[class*="input"] {
+			background-color: $clr-light-grayish-cyan-2;
+			color: $clr-very-dark-cyan;
+			border-radius: 0.8rem;
+			padding: 1.2rem 1.8rem;
+			text-align: right;
+			font-size: $fs-form;
+			font-family: $ff-space-mono;
+			border: none;
 		}
 	}
-}
-
-//aditional
-.hidden {
-	display: none;
 }
