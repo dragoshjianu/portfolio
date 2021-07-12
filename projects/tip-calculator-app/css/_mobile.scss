@@ -1,0 +1,185 @@
+// Layout Mobile
+
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	.header {
+		margin: 5rem 0;
+	}
+}
+
+.card {
+	background-color: $clr-white;
+	color: $clr-dark-grayish-cyan-1;
+	border-radius: 2rem;
+	padding: 4rem 2.5rem;
+	width: 100%;
+
+	&__left {
+		padding: 0 0.8rem;
+
+		& .invalid input[class$="input"] {
+			outline: 0;
+			border: 2px solid hsl(355, 70%, 91%);
+			padding: 1rem 1.6rem;
+		}
+
+		& .alert {
+			color: hsl(355, 70%, 91%);
+			font-size: 1.2rem;
+		}
+	}
+
+	&-item {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 4rem;
+		width: 100%;
+
+		& > .card__heading {
+			display: block;
+			width: 100%;
+		}
+	}
+
+	&__amount .card__heading,
+	&__people .card__heading {
+		margin-bottom: 1.2rem;
+	}
+
+	&__tips .card__heading {
+		margin-bottom: 2.2rem;
+	}
+
+	& input[class$="input"] {
+		background-color: $clr-light-grayish-cyan-2;
+		color: $clr-very-dark-cyan;
+		border-radius: 0.8rem;
+		padding: 1.2rem 1.8rem;
+		text-align: right;
+		font-size: $fs-form;
+		font-family: $ff-space-mono;
+		border: none;
+		background-repeat: no-repeat;
+		background-position: 1.8rem 50%;
+
+		&:hover,
+		&:focus {
+			outline: 0;
+			border: 2px solid $clr-strong-cyan;
+			padding: 1rem 1.6rem;
+		}
+
+		&[class*="amount"] {
+			background-image: url("/projects/tip-calculator-app/images/icon-dollar.svg");
+		}
+		&[class*="people"] {
+			background-image: url("/projects/tip-calculator-app/images/icon-person.svg");
+		}
+	}
+
+	&__tips {
+		display: inline-flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: 1rem;
+
+		& input[type="radio"] {
+			display: none;
+		}
+
+		& .card__tip,
+		& input.card__tip--input {
+			display: inline-block;
+			width: calc((100% - 1rem) / 2);
+			vertical-align: middle;
+			border-radius: 5px;
+			padding: 0.6rem 0;
+			font-size: 2rem;
+		}
+
+		& .card__tip {
+			background-color: $clr-very-dark-cyan;
+			color: $clr-light-grayish-cyan-2;
+			text-align: center;
+
+			&:hover,
+			&:focus {
+				cursor: pointer;
+			}
+		}
+
+		& input.card__tip--input {
+			padding-right: 1.6rem;
+		}
+
+		& .card__tip:hover,
+		& .card__tip:focus,
+		& .selected {
+			background-color: $clr-strong-cyan;
+			color: $clr-very-dark-cyan;
+		}
+	}
+
+	&__heading--wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+	}
+
+	&__right {
+		background-color: $clr-very-dark-cyan;
+		color: $clr-light-grayish-cyan-1;
+		padding: 2.4rem;
+		border-radius: 1.5rem;
+
+		& .card__amounts {
+			margin-bottom: 4rem;
+		}
+
+		.card__tip-amount,
+		.card__total-amount {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			margin-bottom: 2rem;
+			align-items: center;
+
+			&--label {
+				display: flex;
+				flex-direction: column;
+				color: $clr-light-grayish-cyan-2;
+				font-size: 1.8rem;
+
+				& span {
+					font-size: 1.2rem;
+					color: $clr-dark-grayish-cyan-1;
+				}
+			}
+
+			&--sum {
+				color: $clr-strong-cyan;
+				font-size: 3rem;
+			}
+		}
+		& .btn {
+			background-color: $clr-strong-cyan;
+			color: $clr-very-dark-cyan;
+			font-size: 2rem;
+			font-family: $ff-space-mono;
+			text-transform: uppercase;
+			width: 100%;
+			padding: 0.8rem;
+			border: none;
+			border-radius: 5px;
+
+			&:hover,
+			&:focus {
+				cursor: pointer;
+			}
+		}
+	}
+}

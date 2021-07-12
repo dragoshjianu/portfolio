@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,700;1,400&display=swap");
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: "Space Mono", monospace;
+	font-size: 1.6rem;
+	background-color: #c5e4e7;
+	position: relative;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.container .header {
+	margin: 5rem 0;
+}
+
+.card {
+	background-color: white;
+	color: #7f9c9f;
+	border-radius: 2rem;
+	padding: 4rem 2.5rem;
+	width: 100%;
+}
+
+.card__left {
+	padding: 0 0.8rem;
+}
+
+.card__left .invalid input[class$="input"] {
+	outline: 0;
+	border: 2px solid #f8d8db;
+	padding: 1rem 1.6rem;
+}
+
+.card__left .alert {
+	color: #f8d8db;
+	font-size: 1.2rem;
+}
+
+.card-item {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 4rem;
+	width: 100%;
+}
+
+.card-item > .card__heading {
+	display: block;
+	width: 100%;
+}
+
+.card__amount .card__heading,
+.card__people .card__heading {
+	margin-bottom: 1.2rem;
+}
+
+.card__tips .card__heading {
+	margin-bottom: 2.2rem;
+}
+
+.card input[class$="input"] {
+	background-color: #f4fafa;
+	color: #00494d;
+	border-radius: 0.8rem;
+	padding: 1.2rem 1.8rem;
+	text-align: right;
+	font-size: 2.4rem;
+	font-family: "Space Mono", monospace;
+	border: none;
+	background-repeat: no-repeat;
+	background-position: 1.8rem 50%;
+}
+
+.card input[class$="input"]:hover,
+.card input[class$="input"]:focus {
+	outline: 0;
+	border: 2px solid #26c0ab;
+	padding: 1rem 1.6rem;
+}
+
+.card input[class$="input"][class*="amount"] {
+	background-image: url("/projects/tip-calculator-app/images/icon-dollar.svg");
+}
+
+.card input[class$="input"][class*="people"] {
+	background-image: url("/projects/tip-calculator-app/images/icon-person.svg");
+}
+
+.card__tips {
+	display: inline-flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 1rem;
+}
+
+.card__tips .card__tip,
+.card__tips input.card__tip--input {
+	display: inline-block;
+	width: calc((100% - 1rem) / 2);
+	vertical-align: middle;
+	border-radius: 5px;
+	padding: 0.6rem 0;
+	font-size: 2rem;
+}
+
+.card__tips .card__tip {
+	background-color: #00494d;
+	color: #f4fafa;
+	text-align: center;
+}
+
+.card__tips .card__tip:hover,
+.card__tips .card__tip:focus {
+	cursor: pointer;
+}
+
+.card__tips input.card__tip--input {
+	padding-right: 1.6rem;
+}
+
+.card__tips .card__tip:hover,
+.card__tips .card__tip:focus,
+.card__tips .selected {
+	background-color: #26c0ab;
+	color: #00494d;
+}
+
+.card__heading--wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+}
+
+.card__right {
+	background-color: #00494d;
+	color: #c5e4e7;
+	padding: 2.4rem;
+	border-radius: 1.5rem;
+}
+
+.card__right .card__amounts {
+	margin-bottom: 4rem;
+}
+
+.card__right .card__tip-amount,
+.card__right .card__total-amount {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-bottom: 2rem;
+	align-items: center;
+}
+
+.card__right .card__tip-amount--label,
+.card__right .card__total-amount--label {
+	display: flex;
+	flex-direction: column;
+	color: #f4fafa;
+	font-size: 1.8rem;
+}
+
+.card__right .card__tip-amount--label span,
+.card__right .card__total-amount--label span {
+	font-size: 1.2rem;
+	color: #7f9c9f;
+}
+
+.card__right .card__tip-amount--sum,
+.card__right .card__total-amount--sum {
+	color: #26c0ab;
+	font-size: 3rem;
+}
+
+.card__right .btn {
+	background-color: #26c0ab;
+	color: #00494d;
+	font-size: 2rem;
+	font-family: "Space Mono", monospace;
+	text-transform: uppercase;
+	width: 100%;
+	padding: 0.8rem;
+	border: none;
+	border-radius: 5px;
+}
+
+.card__right .btn:hover,
+.card__right .btn:focus {
+	cursor: pointer;
+}
+
+@media screen and (min-width: 760px) {
+	.card {
+		display: flex;
+		flex-flow: row;
+		gap: 4.8rem;
+		max-width: 1000px;
+	}
+	.card__left,
+	.card__right {
+		width: 100%;
+	}
+	.card__left .card__tips .card__tip,
+	.card__left .card__tips input.card__tip--input {
+		width: calc((100% - 4.8rem) / 3);
+	}
+	.card__right {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 4rem;
+	}
+	.card__right .card__tip-amount--sum,
+	.card__right .card__total-amount--sum {
+		font-size: 5rem;
+	}
+}

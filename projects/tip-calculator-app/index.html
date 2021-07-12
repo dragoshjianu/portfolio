@@ -24,7 +24,11 @@
 			<main class="card">
 				<div class="card__left">
 					<div class="card__amount card-item">
-						<label for="amount-input" class="card__heading">Bill</label>
+						<div class="card__heading--wrapper">
+							<label for="amount-input" class="card__heading">Bill</label>
+
+							<span class="alert hidden">Must me greather than 0</span>
+						</div>
 						<input
 							type="number"
 							class="card__amount--input"
@@ -35,11 +39,16 @@
 					</div>
 					<div class="card__tips card-item">
 						<label for="custom-tip" class="card__heading">Select Tip %</label>
-						<span class="card__tip" data-tip="5">5%</span>
-						<span class="card__tip" data-tip="10">10%</span>
-						<span class="card__tip" data-tip="15">15%</span>
-						<span class="card__tip" data-tip="25">25%</span>
-						<span class="card__tip" data-tip="50">50%</span>
+						<input type="radio" name="tip-percent" id="5percent" />
+						<label for="5percent" class="card__tip">5%</label>
+						<input type="radio" name="tip-percent" id="10percent" value="10" />
+						<label for="10percent" class="card__tip">10%</label>
+						<input type="radio" name="tip-percent" id="15percent" value="15" />
+						<label for="15percent" class="card__tip">15%</label>
+						<input type="radio" name="tip-percent" id="25percent" value="25" />
+						<label for="25percent" class="card__tip">25%</label>
+						<input type="radio" name="tip-percent" id="50percent" value="50" />
+						<label for="50percent" class="card__tip">50%</label>
 						<input
 							type="number"
 							class="card__tip--input"
@@ -49,9 +58,14 @@
 						/>
 					</div>
 					<div class="card__people card-item">
-						<label for="card-people" class="card__heading"
-							>Number of People</label
-						>
+						<div class="card__heading--wrapper">
+							<label for="card-people" class="card__heading">
+								Number of People
+							</label>
+
+							<span class="alert hidden">Must me greather than 0</span>
+						</div>
+
 						<input
 							type="number"
 							class="card__people--input"
@@ -62,21 +76,25 @@
 					</div>
 				</div>
 				<div class="card__right">
-					<div class="card__tip-amount">
-						<p class="card__tip-amount--label">
-							Tip Amount <span> / person</span>
-						</p>
-						<p class="card__tip-amount--sum">$0.00</p>
+					<div class="card__amounts">
+						<div class="card__tip-amount">
+							<p class="card__tip-amount--label">
+								Tip Amount <span> / person</span>
+							</p>
+							<p class="card__tip-amount--sum">$0.00</p>
+						</div>
+						<div class="card__total-amount">
+							<p class="card__total-amount--label">
+								Total <span> / person</span>
+							</p>
+							<p class="card__total-amount--sum">$0.00</p>
+						</div>
 					</div>
-					<div class="card__total-amount">
-						<p class="card__total-amount--label">
-							Total <span> / person</span>
-						</p>
-						<p class="card__total-amount--sum">$0.00</p>
-					</div>
+
 					<button class="btn">Reset</button>
 				</div>
 			</main>
 		</section>
+		<script src="./js/app.js"></script>
 	</body>
 </html>
