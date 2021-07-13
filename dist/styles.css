@@ -97,11 +97,11 @@ body {
 }
 
 .card input[class$="input"][class*="amount"] {
-  background-image: url("/projects/tip-calculator-app/images/icon-dollar.svg");
+  background-image: url("../images/icon-dollar.svg");
 }
 
 .card input[class$="input"][class*="people"] {
-  background-image: url("/projects/tip-calculator-app/images/icon-person.svg");
+  background-image: url("../images/icon-person.svg");
 }
 
 .card__tips {
