@@ -18,6 +18,10 @@ body {
 	position: relative;
 }
 
+.hidden {
+	opacity: 0;
+}
+
 .container {
 	display: flex;
 	flex-direction: column;
@@ -108,6 +112,10 @@ body {
 	gap: 1rem;
 }
 
+.card__tips input[type="radio"] {
+	display: none;
+}
+
 .card__tips .card__tip,
 .card__tips input.card__tip--input {
 	display: inline-block;
@@ -134,8 +142,12 @@ body {
 }
 
 .card__tips .card__tip:hover,
-.card__tips .card__tip:focus,
-.card__tips .selected {
+.card__tips .card__tip:focus {
+	background-color: #26c0ab;
+	color: #00494d;
+}
+
+.card__tips input[name="tip-percent"]:checked + label.card__tip {
 	background-color: #26c0ab;
 	color: #00494d;
 }
@@ -229,3 +241,4 @@ body {
 		font-size: 5rem;
 	}
 }
+/*# sourceMappingURL=styles.css.map */
