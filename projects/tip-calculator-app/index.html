@@ -34,12 +34,11 @@
 							class="card__amount--input"
 							id="amount-input"
 							placeholder="0"
-							value="142.55"
 						/>
 					</div>
 					<div class="card__tips card-item">
 						<label for="custom-tip" class="card__heading">Select Tip %</label>
-						<input type="radio" name="tip-percent" id="5percent" />
+						<input type="radio" name="tip-percent" id="5percent" value="5" />
 						<label for="5percent" class="card__tip">5%</label>
 						<input type="radio" name="tip-percent" id="10percent" value="10" />
 						<label for="10percent" class="card__tip">10%</label>
@@ -53,7 +52,6 @@
 							type="number"
 							class="card__tip--input"
 							id="custom-tip"
-							data-tip="custom"
 							placeholder="Custom"
 						/>
 					</div>
@@ -71,7 +69,6 @@
 							class="card__people--input"
 							id="card-people"
 							placeholder="0"
-							value="5"
 						/>
 					</div>
 				</div>
@@ -81,13 +78,17 @@
 							<p class="card__tip-amount--label">
 								Tip Amount <span> / person</span>
 							</p>
-							<p class="card__tip-amount--sum">$0.00</p>
+							<p class="card__tip-amount--sum">
+								$<span class="sum-value">0.00</span>
+							</p>
 						</div>
 						<div class="card__total-amount">
 							<p class="card__total-amount--label">
 								Total <span> / person</span>
 							</p>
-							<p class="card__total-amount--sum">$0.00</p>
+							<p class="card__total-amount--sum">
+								$<span class="sum-value">0.00</span>
+							</p>
 						</div>
 					</div>
 

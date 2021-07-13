@@ -140,8 +140,12 @@ body {
 }
 
 .card__tips .card__tip:hover,
-.card__tips .card__tip:focus,
-.card__tips .selected {
+.card__tips .card__tip:focus {
+  background-color: #26c0ab;
+  color: #00494d;
+}
+
+.card__tips input[name="tip-percent"]:checked + label.card__tip {
   background-color: #26c0ab;
   color: #00494d;
 }

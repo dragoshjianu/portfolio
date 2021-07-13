@@ -117,8 +117,12 @@
 		}
 
 		& .card__tip:hover,
-		& .card__tip:focus,
-		& .selected {
+		& .card__tip:focus {
+			background-color: $clr-strong-cyan;
+			color: $clr-very-dark-cyan;
+		}
+
+		& input[name="tip-percent"]:checked + label.card__tip {
 			background-color: $clr-strong-cyan;
 			color: $clr-very-dark-cyan;
 		}
