@@ -92,8 +92,8 @@ body {
 
 .card input[class$="input"]:hover, .card input[class$="input"]:focus {
   outline: 0;
-  border: 2px solid #26c0ab;
-  padding: 1rem 1.6rem;
+  outline: 0;
+  box-shadow: inset 0px 0px 0px 2px #26c0ab;
 }
 
 .card input[class$="input"][class*="amount"] {
