@@ -14,9 +14,9 @@ const reset = document.querySelector(".btn");
 
 const initialise = () => {
 	amountInput.value = "";
-	noPeople.value = 1;
-	tipPerPerson.textContent = Number(0).toFixed(2);
-	amountPerPerson.textContent = Number(0).toFixed(2);
+	noPeople.value = "";
+	tipPerPerson.textContent = `$0.00`;
+	amountPerPerson.textContent = `$0.00`;
 	customTip.value = "";
 	radioBtns.forEach((btn) => {
 		btn.checked = false;
@@ -67,13 +67,28 @@ const totalPerPerson = () => {
 };
 
 const changeValues = () => {
-	tipPerPerson.textContent = Number(tipAmountPerPerson()).toFixed(2);
-	amountPerPerson.textContent = Number(totalPerPerson()).toFixed(2);
+	!isNaN(tipAmountPerPerson())
+		? (tipPerPerson.textContent = `$${tipAmountPerPerson().toFixed(2)}`)
+		: (tipPerPerson.textContent = `$0.00`);
+	!isNaN(tipAmountPerPerson())
+		? (amountPerPerson.textContent = `$${totalPerPerson().toFixed(2)}`)
+		: (amountPerPerson.textContent = `$0.00`);
 };
 
 amountInput.addEventListener("blur", changeValues);
 customTip.addEventListener("blur", changeValues);
-noPeople.addEventListener("blur", changeValues);
+noPeople.addEventListener("blur", (e) => {
+	const alert = e.target.parentNode.querySelector(".alert");
+	if (!noPeople.value) {
+		noPeople.parentElement.classList.add("invalid");
+		alert.classList.remove("hidden");
+	}
+	if (noPeople.value) {
+		noPeople.parentElement.classList.remove("invalid");
+		alert.classList.add("hidden");
+		changeValues();
+	}
+});
 radioBtns.forEach((btn) => {
 	btn.addEventListener("change", changeValues);
 });
