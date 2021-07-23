@@ -4,13 +4,11 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
 		<script
-			defer
-			src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"
-			integrity="sha384-haqrlim99xjfMxRP6EWtafs0sB1WKcMdynwZleuUSwJR0mDeRYbhtY+KPMr+JL6f"
+			src="https://kit.fontawesome.com/693bdf6bd2.js"
 			crossorigin="anonymous"
 		></script>
+
 		<link
 			rel="icon"
 			type="image/png"
@@ -18,10 +16,121 @@
 			href="./images/favicon-32x32.png"
 		/>
 
-		<!-- <link rel="stylesheet" href="./css/styles.css"> -->
-		<link rel="stylesheet" href="/dist/styles.css" />
+		<link rel="stylesheet" href="./css/styles.css" />
 
 		<title>Frontend Mentor | Sunnyside agency landing page</title>
 	</head>
-	<body></body>
+	<body>
+		<header class="hero">
+			<div class="heading">
+				<img
+					src="./images/logo.svg"
+					alt="SunnySide Logo"
+					class="heading__logo"
+				/>
+				<div class="nav">
+					<nav class="nav__list--mobile">
+						<i class="fas fa-bars"></i>
+						<ul class="nav__items hidden">
+							<li class="nav__item">
+								<a href="#" class="nav__link">About</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link">Services</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link">Projects</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link highlited">Contact</a>
+							</li>
+						</ul>
+					</nav>
+
+					<nav class="nav__list--desktop">
+						<ul class="nav__items">
+							<li class="nav__item">
+								<a href="#" class="nav__link">About</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link">Services</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link">Projects</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link highlited">Contact</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<div class="hero__motto">
+				<p class="hero__motto--text">We are creatives</p>
+				<img
+					src="./images/icon-arrow-down.svg"
+					alt="go down arrow"
+					class="hero__motto--down-arrow"
+				/>
+			</div>
+		</header>
+		<main class="container">
+			<section class="container__tiles-row">
+				<div class="container__tile tile-img">
+					<img
+						src="./images/mobile/image-transform.jpg"
+						alt="transform your brand"
+					/>
+				</div>
+				<div class="container__tile tile-text">
+					<h3 class="container__tile--heading">Transform your brand</h3>
+					<p class="container__tile--text">
+						We are a full-service creative agency specializing in helping brands
+						grow fast. Engage your clients through compelling visuals that do
+						most of the marketing for you.
+					</p>
+					<button class="btn container__tile--btn btn-yellow">
+						Learn More
+					</button>
+				</div>
+			</section>
+			<section class="container__tiles-row">
+				<div class="container__tile tile-img">
+					<img
+						src="./images/mobile/image-stand-out.jpg"
+						alt="transform your brand"
+					/>
+				</div>
+				<div class="container__tile tile-text">
+					<h3 class="container__tile--heading">
+						Stand out to the right audience
+					</h3>
+					<p class="container__tile--text">
+						Using a collaborative formula of designers, researchers,
+						photographers, videographers, and copywriters, we’ll build and
+						extend your brand in digital places.
+					</p>
+					<button class="btn container__tile--btn btn-red">Learn More</button>
+				</div>
+			</section>
+			<section class="container__tiles-row">
+				<div class="container__tile tile-img-text graphic">
+					<h3 class="container__tile--heading">Graphic design</h3>
+					<p class="constiner__tile--text">
+						Great design makes you memorable. We deliver artwork that
+						underscores your brand message and captures potential clients’
+						attention.
+					</p>
+				</div>
+				<div class="container__tile tile-img-text photography">
+					<h3 class="container__tile--heading">Photography</h3>
+					<p class="constiner__tile--text">
+						Increase your credibility by getting the most stunning, high-quality
+						photos that improve your business image.
+					</p>
+				</div>
+			</section>
+		</main>
+		<footer class="footer"></footer>
+	</body>
 </html>

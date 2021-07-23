@@ -12,6 +12,30 @@ html {
 
 body {
 	font-size: 1.8rem;
-	font-family: "Barlow", sans-serif;
-	font-weight: 600;
+	font-family: $ff-barlow;
+	width: 100%;
+	min-height: 100vh;
+}
+header {
+	padding: 3rem 2rem;
+}
+
+nav[class$="desktop"] {
+	display: none;
+}
+nav[class$="mobile"] {
+	display: flex;
+}
+
+.hidden {
+	display: none;
+}
+
+@media screen and (min-width: 780px) {
+	nav[class$="mobile"] {
+		display: none;
+	}
+	nav[class$="desktop"] {
+		display: flex;
+	}
 }
