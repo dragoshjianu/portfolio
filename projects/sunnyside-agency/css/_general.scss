@@ -20,6 +20,11 @@ header {
 	padding: 3rem 2rem;
 }
 
+.heading,
+.container,
+.footer {
+	width: 100vw;
+}
 nav[class$="desktop"] {
 	display: none;
 }
