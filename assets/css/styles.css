@@ -78,6 +78,9 @@ strong {
 	outline: 3px solid var(--clr-accent);
 	outline-offset: 3px;
 }
+.small-text {
+	font-size: 0.75rem;
+}
 
 /* Buttons */
 .btn {
@@ -155,7 +158,13 @@ header {
 	padding: 1em;
 }
 .logo {
-	max-width: 150px;
+	max-width: 500px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.logo-text {
+	max-height: 30px;
 }
 
 .nav {
