@@ -23,12 +23,10 @@
 		<meta property="og:title" content="Dragos Jianu - Portofoliu Online" />
 		<meta
 			property="og:description"
-			content="Pagina de portofoliu online. Toate website-urie si realizarile mele ca si web developer. Lucrarile pleaca de la cele mai simple cu HTML + CSS, 
-			apoi cu o tehnologii mai avansate: SASS si JS. Urmeaza, sa introduc si lucrari folosind framework-uri JS."
+			content="Pagina de portofoliu online. Toate website-urie si realizarile mele ca web developer. Lucrarile pleaca de la cele mai simple cu HTML + CSS, 
+			apoi cu o tehnologii mai avansate: SASS si JS."
 		/>
-
 		<meta property="og:site_name" content="Dragos Jianu" />
-		<!--De Completat site_name pt OG-->
 		<meta property="og:type" content="website" />
 		<meta property="og:locale" content="ro_RO" />
 		<meta
@@ -182,12 +180,29 @@
 					</p>
 				</div>
 
-				<img
+				<!-- <img
 					src="./assets/img/secondaryPicture.jpg"
 					alt="alta poza cu Dragos"
 					class="about-me__img"
 					itemprop="image"
-				/>
+				/> -->
+				<picture class="about-me__img">
+					<source
+						type="image/webp"
+						srcset="
+							./assets/img/dragos-jianu-about-me-200.webp 200w,
+							./assets/img/dragos-jianu-about-me-350.webp 350w
+						"
+						sizes=""
+					/>
+					<img
+						srcset="
+							./assets/img/dragos-jianu-about-me-200.jpg 200w,
+							./assets/img/dragos-jianu-about-me-350.jpg 350w
+						"
+						sizes=""
+					/>
+				</picture>
 			</section>
 
 			<!-- Portofoliu -->
