@@ -155,16 +155,13 @@ h3 {
 header {
 	display: flex;
 	justify-content: space-between;
-	padding: 1em;
 }
 .logo {
-	max-width: 500px;
+	max-width: 300px;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-}
-.logo-text {
-	max-height: 30px;
+	padding: 2rem 3rem;
 }
 
 .nav {
