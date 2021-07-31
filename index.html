@@ -179,28 +179,27 @@
 						ut incidunt nobis.
 					</p>
 				</div>
-
-				<!-- <img
-					src="./assets/img/secondaryPicture.jpg"
-					alt="alta poza cu Dragos"
-					class="about-me__img"
-					itemprop="image"
-				/> -->
 				<picture class="about-me__img">
 					<source
 						type="image/webp"
 						srcset="
-							./assets/img/dragos-jianu-about-me-200.webp 200w,
-							./assets/img/dragos-jianu-about-me-350.webp 350w
+							./assets/img/dragos-jianu-about-me-350.webp 350w,
+							./assets/img/dragos-jianu-about-me-200.webp 200w
 						"
-						sizes=""
+						sizes="
+							(max-width: 599px) 350px,
+							(min-width: 600px) 200px
+						"
 					/>
 					<img
 						srcset="
-							./assets/img/dragos-jianu-about-me-200.jpg 200w,
-							./assets/img/dragos-jianu-about-me-350.jpg 350w
+							./assets/img/dragos-jianu-about-me-350.jpg 350w,
+							./assets/img/dragos-jianu-about-me-200.jpg 200w
 						"
-						sizes=""
+						sizes="
+							(max-width: 599px) 350px,
+							(min-width: 600px) 200px
+						"
 					/>
 				</picture>
 			</section>
