@@ -1,0 +1,181 @@
+/**
+## Layout
+The designs were created to the following widths:
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+### Primary
+
+- Cyan: hsl(179, 62%, 43%)
+- Bright Yellow: hsl(71, 73%, 54%)
+
+### Neutral
+- Light Gray: hsl(204, 43%, 93%)
+- Grayish Blue: hsl(218, 22%, 67%)
+
+## Typography
+### Body Copy
+
+- Font size: 16px
+### Font
+
+- Family: [Karla](https://fonts.google.com/specimen/Karla)
+- Weights: 400, 700
+*/
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #e5eff5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Karla", sans-serif;
+}
+
+.container {
+  display: grid;
+  place-content: center;
+  width: 80%;
+  border-radius: 0.4em;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 780px) {
+  .container {
+    max-width: 650px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "comunity comunity" "subscription why-us";
+  }
+}
+
+.container .grid-cell {
+  padding: 2em 1.5em;
+}
+
+@media screen and (min-width: 780px) {
+  .container .grid-cell {
+    padding: 2em;
+  }
+}
+
+.container .grid-cell.comunity {
+  background-color: white;
+  color: #98a6bd;
+}
+
+@media screen and (min-width: 780px) {
+  .container .grid-cell.comunity {
+    grid-area: comunity;
+  }
+}
+
+.container .grid-cell.comunity .subheading {
+  font-weight: 700;
+}
+
+.container .grid-cell.comunity .description {
+  color: inherit;
+}
+
+.container .grid-cell.subscription {
+  background-color: #2ab2af;
+}
+
+@media screen and (min-width: 780px) {
+  .container .grid-cell.subscription {
+    grid-area: subscription;
+  }
+}
+
+.container .grid-cell.subscription .heading {
+  margin-bottom: 1em;
+}
+
+.container .grid-cell.subscription .subheading {
+  margin-bottom: 2rem;
+}
+
+.container .grid-cell.why-us {
+  background-color: #2dbebb;
+}
+
+@media screen and (min-width: 780px) {
+  .container .grid-cell.why-us {
+    grid-area: why-us;
+  }
+}
+
+.container .grid-cell .heading {
+  margin-bottom: 2rem;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.container .grid-cell .subheading {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.container .grid-cell .price-tag {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-weight: 400;
+  margin-bottom: 0.5em;
+}
+
+.container .grid-cell .price-tag .price {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-right: 0.2em;
+}
+
+.container .grid-cell .btn-cta {
+  display: inline-block;
+  width: 100%;
+  padding: 1rem 0;
+  background-color: #c0df34;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 0.4rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+.container .grid-cell .description {
+  font-size: 0.8rem;
+  line-height: 2em;
+  color: white;
+}
+
+.container .grid-cell .description__items {
+  list-style: none;
+  color: white;
+}
+
+.container .grid-cell .description__item {
+  line-height: 1.5em;
+}
+
+.container .white {
+  color: white;
+}
+
+.container .green {
+  color: #2ab2af;
+}
+
+.container .yellow {
+  color: #c0df34;
+}
+/*# sourceMappingURL=style.css.map */

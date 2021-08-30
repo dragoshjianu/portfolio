@@ -1,0 +1,167 @@
+/**
+## Layout
+The designs were created to the following widths:
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+### Primary
+
+- Cyan: hsl(179, 62%, 43%)
+- Bright Yellow: hsl(71, 73%, 54%)
+
+### Neutral
+- Light Gray: hsl(204, 43%, 93%)
+- Grayish Blue: hsl(218, 22%, 67%)
+
+## Typography
+### Body Copy
+
+- Font size: 16px
+### Font
+
+- Family: [Karla](https://fonts.google.com/specimen/Karla)
+- Weights: 400, 700
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+$clr-cyan: rgb(42, 178, 175);
+$clr-bright-yellow: hsl(71, 73%, 54%);
+$clr-light-grey: hsl(204, 43%, 93%);
+$clr-grey-blue: hsl(218, 22%, 67%);
+
+$fs-regular: 1rem;
+
+$ff-Karla: "Karla", sans-serif;
+
+$fw-regular: 400;
+$fw-bold: 700;
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+	background-color: $clr-light-grey;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: $ff-Karla;
+}
+.container {
+	display: grid;
+	place-content: center;
+	width: 80%;
+	border-radius: 0.4em;
+	overflow: hidden;
+	@media screen and (min-width: 780px) {
+		max-width: 650px;
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas:
+			"comunity comunity"
+			"subscription why-us";
+	}
+
+	.grid-cell {
+		padding: 2em 1.5em;
+		@media screen and (min-width: 780px) {
+			padding: 2em;
+		}
+		&.comunity {
+			background-color: white;
+			color: $clr-grey-blue;
+			@media screen and (min-width: 780px) {
+				grid-area: comunity;
+			}
+			.subheading {
+				font-weight: $fw-bold;
+			}
+			.description {
+				color: inherit;
+			}
+		}
+		&.subscription {
+			background-color: $clr-cyan;
+			@media screen and (min-width: 780px) {
+				grid-area: subscription;
+			}
+
+			.heading {
+				margin-bottom: 1em;
+			}
+
+			.subheading {
+				margin-bottom: 2rem;
+			}
+		}
+
+		&.why-us {
+			background-color: lighten($clr-cyan, 3%);
+			@media screen and (min-width: 780px) {
+				grid-area: why-us;
+			}
+		}
+
+		.heading {
+			margin-bottom: 2rem;
+			font-size: 1.3rem;
+			font-weight: $fw-regular;
+		}
+		.subheading {
+			margin-bottom: 1rem;
+			font-size: $fs-regular;
+			font-weight: $fw-regular;
+		}
+		.price-tag {
+			display: flex;
+			align-items: center;
+			color: white;
+			font-weight: $fw-regular;
+			margin-bottom: 0.5em;
+			.price {
+				font-size: 2.5rem;
+				font-weight: $fw-bold;
+				margin-right: 0.2em;
+			}
+		}
+		.btn-cta {
+			display: inline-block;
+			width: 100%;
+			padding: 1rem 0;
+			background-color: $clr-bright-yellow;
+			color: white;
+			text-decoration: none;
+			text-align: center;
+			border-radius: 0.4rem;
+			box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+				rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+		}
+		.description {
+			font-size: 0.8rem;
+			line-height: 2em;
+			color: white;
+			&__items {
+				list-style: none;
+				color: white;
+			}
+			&__item {
+				line-height: 1.5em;
+			}
+		}
+	}
+	.white {
+		color: white;
+	}
+	.green {
+		color: $clr-cyan;
+	}
+	.yellow {
+		color: $clr-bright-yellow;
+	}
+}
