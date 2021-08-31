@@ -32,6 +32,7 @@ body {
   text-align: center;
   margin-bottom: 4rem;
   color: #a3a5ae;
+  width: 100%;
 }
 
 .main-header .heading {
@@ -44,6 +45,13 @@ body {
 .main-header .heading .highlighted {
   display: block;
   color: #4c4e61;
+}
+
+@media screen and (min-width: 1000px) {
+  .main-header .heading-text {
+    width: 50%;
+    margin: 0 auto;
+  }
 }
 
 .cards {
