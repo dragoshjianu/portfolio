@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+$clr-red: hsl(0, 78%, 62%);
+$clr-cyan: hsl(180, 62%, 55%);
+$clr-orange: hsl(34, 97%, 64%);
+$clr-blue: hsl(212, 86%, 64%);
+$clr-very-dark-blue: hsl(234, 12%, 34%);
+$clr-grayish-blue: hsl(229, 6%, 66%);
+$clr-very-light-gray: hsl(0, 0%, 98%);
+
+$ff-poppins: "Poppins", sans-serif;
+$fs-15: 15px;
+$fw-200: 200;
+$fw-400: 400;
+$fw-600: 600;
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: $fs-15;
+}
+
+body {
+	min-height: 100vh;
+	background-color: $clr-very-light-gray;
+	font-family: $ff-poppins;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	width: 80%;
+	max-width: 1100px;
+}
+
+.main-header {
+	text-align: center;
+	margin-bottom: 4rem;
+	color: $clr-grayish-blue;
+	.heading {
+		margin-bottom: 1rem;
+		font-size: 1.5rem;
+		font-weight: $fw-200;
+		color: $clr-very-dark-blue;
+		.highlighted {
+			display: block;
+			color: $clr-very-dark-blue;
+		}
+	}
+}
+
+.cards {
+	display: grid;
+	grid-gap: 1.5rem;
+	place-items: center;
+
+	@media screen and (min-width: 1000px) {
+		grid-template-areas:
+			". card-team ."
+			"card-sup card-team card-calc"
+			"card-sup card-karma card-calc"
+			". card-karma-.";
+	}
+
+	.card {
+		background-color: white;
+		color: $clr-grayish-blue;
+		padding: 2rem 2rem;
+		position: relative;
+		min-height: 15rem;
+		max-width: 23rem;
+		border-radius: 0.5rem;
+		border-top-width: 4px;
+		border-top-style: solid;
+		font-size: 0.8rem;
+		font-weight: $fw-400;
+		line-height: 1.5rem;
+		letter-spacing: 0.2px;
+		box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+			rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+		@media screen and (min-width: 1000px) {
+			min-width: 16rem;
+		}
+
+		& h3 {
+			color: $clr-very-dark-blue;
+			font-size: 1.2rem;
+			line-height: 1.6;
+			font-weight: $fw-600;
+			margin-bottom: 0.5rem;
+		}
+
+		.card-icon {
+			position: absolute;
+			bottom: 2rem;
+			right: 1.5rem;
+		}
+
+		&.supervisor {
+			border-top-color: $clr-cyan;
+			@media screen and (min-width: 1000px) {
+				grid-area: card-sup;
+				align-self: start;
+			}
+		}
+		&.team-builder {
+			border-top-color: $clr-red;
+			@media screen and (min-width: 1000px) {
+				grid-area: card-team;
+				align-self: end;
+			}
+		}
+		&.karma {
+			border-top-color: $clr-orange;
+			@media screen and (min-width: 1000px) {
+				grid-area: card-karma;
+			}
+		}
+		&.calculator {
+			border-top-color: $clr-blue;
+			@media screen and (min-width: 1000px) {
+				grid-area: card-calc;
+				align-self: start;
+			}
+		}
+	}
+}
