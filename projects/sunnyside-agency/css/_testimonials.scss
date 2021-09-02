@@ -1,0 +1,33 @@
+.testimonials {
+	padding: 5rem 3rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 5rem;
+
+	.testimonials-header {
+		font-family: $ff-fraunces;
+		color: $clr-grayish-blue;
+		text-transform: uppercase;
+		letter-spacing: 5px;
+		font-size: 1.5rem;
+		font-weight: 900;
+	}
+
+	.testimonial-item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		gap: 3rem;
+
+		.testimonial-image {
+		}
+		.testimonial-text {
+		}
+		.testimonial-name {
+		}
+		.testimonial-function {
+		}
+	}
+}

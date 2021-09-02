@@ -4,10 +4,6 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<script
-			src="https://kit.fontawesome.com/693bdf6bd2.js"
-			crossorigin="anonymous"
-		></script>
 
 		<link
 			rel="icon"
@@ -18,119 +14,286 @@
 
 		<link rel="stylesheet" href="./css/styles.min.css" />
 
-		<title>Frontend Mentor | Sunnyside agency landing page</title>
+		<title>Sunnyside agency landing page - by Dragos Jianu</title>
 	</head>
 	<body>
-		<header class="hero">
-			<div class="heading">
-				<img
-					src="./images/logo.svg"
-					alt="SunnySide Logo"
-					class="heading__logo"
-				/>
-				<div class="nav">
-					<nav class="nav__list--mobile">
-						<i class="fas fa-bars"></i>
-						<ul class="nav__items hidden">
-							<li class="nav__item">
-								<a href="#" class="nav__link">About</a>
+		<div class="container">
+			<header class="header">
+				<nav class="navbar">
+					<div class="header-logo">
+						<img
+							src="./images/logo.svg"
+							alt="Sunnyside logo"
+							class="logo-image"
+							width="120"
+							height="25"
+						/>
+					</div>
+					<div class="toggle-menu">
+						<img
+							src="./images/icon-hamburger.svg"
+							alt="toggle menu icon"
+							class="toggle-menu-icon"
+						/>
+					</div>
+					<div class="menu-list hidden">
+						<ul class="menu-items">
+							<li class="menu-item">
+								<a href="#" class="menu-link">About</a>
 							</li>
-							<li class="nav__item">
-								<a href="#" class="nav__link">Services</a>
+							<li class="menu-item">
+								<a href="#" class="menu-link">Services</a>
 							</li>
-							<li class="nav__item">
-								<a href="#" class="nav__link">Projects</a>
+							<li class="menu-item">
+								<a href="#" class="menu-link">Projects</a>
 							</li>
-							<li class="nav__item">
-								<a href="#" class="nav__link highlited">Contact</a>
-							</li>
-						</ul>
-					</nav>
-
-					<nav class="nav__list--desktop">
-						<ul class="nav__items">
-							<li class="nav__item">
-								<a href="#" class="nav__link">About</a>
-							</li>
-							<li class="nav__item">
-								<a href="#" class="nav__link">Services</a>
-							</li>
-							<li class="nav__item">
-								<a href="#" class="nav__link">Projects</a>
-							</li>
-							<li class="nav__item">
-								<a href="#" class="nav__link highlited">Contact</a>
+							<li class="menu-item">
+								<a href="#" class="menu-link btn">Contact</a>
 							</li>
 						</ul>
-					</nav>
-				</div>
-			</div>
-			<div class="hero__motto">
-				<p class="hero__motto--text">We are creatives</p>
-				<img
-					src="./images/icon-arrow-down.svg"
-					alt="go down arrow"
-					class="hero__motto--down-arrow"
-				/>
-			</div>
-		</header>
-		<main class="container">
-			<section class="container__tiles-row">
-				<div class="container__tile tile-img">
+					</div>
+				</nav>
+			</header>
+			<main class="main-content">
+				<section class="hero">
+					<h1 class="hero-title">we are creatives</h1>
+					<div class="hero-image">
+						<img
+							src="./images/icon-arrow-down.svg"
+							alt="Down arrow to the tiles area"
+							class="image-down-arrow"
+							width="36"
+							height="144"
+						/>
+					</div>
+				</section>
+				<section class="tiles-area">
+					<div class="tile">
+						<picture class="tile-image">
+							<source
+								srcset="./images/desktop/image-transform.jpg"
+								media="(min-width: 780px)"
+							/>
+							<source
+								srcset="./images/mobile/image-transform.jpg"
+								media="(min-width: 100px)"
+							/>
+							<img
+								src="./images/mobile/image-transform.jpg "
+								alt="Transform Area Image with an Egg"
+							/>
+						</picture>
+					</div>
+					<div class="tile tile-text-container">
+						<h2 class="tile-heading">Transform your brand</h2>
+						<p class="tile-text">
+							We are a full-service creative agency specializing in helping
+							brands grow fast. Engage your clients through compelling visuals
+							that do most of the marketing for you.
+						</p>
+						<a href="#" class="tile-link underline underline-yellow"
+							>Learn more</a
+						>
+					</div>
+					<div class="tile">
+						<picture class="tile-image">
+							<source
+								type="image/jpeg"
+								srcset="./images/desktop/image-stand-out.jpg"
+								media="(min-width: 780px)"
+							/>
+							<source
+								type="image/jpeg"
+								srcset="./images/mobile/image-stand-out.jpg"
+								media="(min-width: 100px)"
+							/>
+							<img
+								src="./images/mobile/image-stand-out.jpg "
+								alt="Stand out Area Image with a glass"
+							/>
+						</picture>
+					</div>
+					<div class="tile tile-text-container">
+						<h2 class="tile-heading">Stand out to the right audience</h2>
+						<p class="tile-text">
+							Using a collaborative formula of designers, researchers,
+							photographers, videographers, and copywriters, we’ll build and
+							extend your brand in digital places.
+						</p>
+						<a href="#" class="tile-link underline underline-pink"
+							>Learn more</a
+						>
+					</div>
+					<div class="tile tile-text-container tile-image-text design">
+						<h3 class="tile-heading">Graphic Design</h3>
+						<p class="tile-text">
+							Great design makes you memorable. We deliver artwork that
+							underscores your brand message and captures potential clients’
+							attention.
+						</p>
+					</div>
+					<div class="tile tile-text-container tile-image-text photography">
+						<h3 class="tile-heading">Photography</h3>
+						<p class="tile-text">
+							Increase your credibility by getting the most stunning,
+							high-quality photos that improve your business image.
+						</p>
+					</div>
+				</section>
+				<section class="testimonials">
+					<h2 class="testimonials-header">Client Testimonials</h2>
+					<div class="testimonial-group">
+						<div class="testimonial-item">
+							<img
+								src="./images/image-emily.jpg"
+								alt=""
+								class="testimonial-image"
+								width="144"
+								haight="144"
+							/>
+							<p class="testimonial-text">
+								We put our trust in Sunnyside and they delivered, making sure
+								our needs were met and deadlines were always hit.
+							</p>
+							<div class="person-data">
+								<p class="testimonial-name">Emily R.</p>
+								<p class="testimonial-function">Marketing Director</p>
+							</div>
+						</div>
+						<div class="testimonial-item">
+							<img
+								src="./images/image-thomas.jpg"
+								alt=""
+								class="testimonial-image"
+								width="144"
+								haight="144"
+							/>
+							<p class="testimonial-text">
+								Sunnyside’s enthusiasm coupled with their keen interest in our
+								brand’s success made it a satisfying and enjoyable experience.
+							</p>
+							<p class="testimonial-name">Thomas S.</p>
+							<p class="testimonial-function">Chief Operating Officer</p>
+						</div>
+						<div class="testimonial-item">
+							<img
+								src="./images/image-jennie.jpg"
+								alt=""
+								class="testimonial-image"
+								width="144"
+								haight="144"
+							/>
+							<p class="testimonial-text">
+								Incredible end result! Our sales increased over 400% when we
+								worked with Sunnyside. Highly recommended!
+							</p>
+							<p class="testimonial-name">Jennie F.</p>
+							<p class="testimonial-function">Business Owner</p>
+						</div>
+					</div>
+				</section>
+				<section class="gallery">
+					<picture class="gallery-image">
+						<source
+							type="image/jpeg"
+							srcset="./images/desktop/image-gallery-milkbottles.jpg"
+							media="(min-width: 780px)"
+						/>
+						<source
+							type="image/jpeg"
+							srcset="./images/mobile/image-gallery-milkbottles.jpg"
+							media="(min-width: 100px)"
+						/>
+						<img
+							src="./images/mobile/image-gallery-milkbottles.jpg "
+							alt="Sunnyside gallery image milkbottles"
+							width="188"
+							height="188"
+						/>
+					</picture>
+					<picture class="gallery-image">
+						<source
+							type="image/jpeg"
+							srcset="./images/desktop/image-gallery-orange.jpg"
+							media="(min-width: 780px)"
+						/>
+						<source
+							type="image/jpeg"
+							srcset="./images/mobile/image-gallery-orange.jpg"
+							media="(min-width: 100px)"
+						/>
+						<img
+							src="./images/mobile/image-gallery-orange.jpg "
+							alt="Sunnyside gallery image orange"
+							width="188"
+							height="188"
+						/>
+					</picture>
+					<picture class="gallery-image">
+						<source
+							type="image/jpeg"
+							srcset="./images/desktop/image-gallery-cone.jpg"
+							media="(min-width: 780px)"
+						/>
+						<source
+							type="image/jpeg"
+							srcset="./images/mobile/image-gallery-cone.jpg"
+							media="(min-width: 100px)"
+						/>
+						<img
+							src="./images/mobile/image-gallery-cone.jpg "
+							alt="Sunnyside gallery image milkbottles"
+							width="188"
+							height="188"
+						/>
+					</picture>
+					<picture class="gallery-image">
+						<source
+							type="image/jpeg"
+							srcset="./images/desktop/image-gallery-sugar-cubes.jpg"
+							media="(min-width: 780px)"
+						/>
+						<source
+							type="image/jpeg"
+							srcset="./images/mobile/image-gallery-sugar-cubes.jpg"
+							media="(min-width: 100px)"
+						/>
+						<img
+							src="./images/mobile/image-gallery-sugar-cubes.jpg "
+							alt="Sunnyside gallery image milkbottles"
+							width="188"
+							height="188"
+						/>
+					</picture>
+				</section>
+			</main>
+			<footer class="footer">
+				<div class="footer-image">
 					<img
-						src="./images/mobile/image-transform.jpg"
-						alt="transform your brand"
+						src="./images/logo.svg"
+						alt="Sunnyside footer logo"
+						class="footer-logo"
 					/>
 				</div>
-				<div class="container__tile tile-text">
-					<h3 class="container__tile--heading">Transform your brand</h3>
-					<p class="container__tile--text">
-						We are a full-service creative agency specializing in helping brands
-						grow fast. Engage your clients through compelling visuals that do
-						most of the marketing for you.
-					</p>
-					<button class="btn container__tile--btn btn-yellow">
-						Learn More
-					</button>
+				<div class="footer-menu">
+					<ul class="menu-list">
+						<li class="menu-item"><a href="#" class="menu-link">About</a></li>
+						<li class="menu-item">
+							<a href="#" class="menu-link">Services</a>
+						</li>
+						<li class="menu-item">
+							<a href="#" class="menu-link">Projects</a>
+						</li>
+					</ul>
 				</div>
-			</section>
-			<section class="container__tiles-row">
-				<div class="container__tile tile-img">
-					<img
-						src="./images/mobile/image-stand-out.jpg"
-						alt="transform your brand"
-					/>
+				<div class="footer-social-media">
+					<div class="facebook"></div>
+					<div class="instagram"></div>
+					<div class="twitter"></div>
+					<div class="pinterest"></div>
 				</div>
-				<div class="container__tile tile-text">
-					<h3 class="container__tile--heading">
-						Stand out to the right audience
-					</h3>
-					<p class="container__tile--text">
-						Using a collaborative formula of designers, researchers,
-						photographers, videographers, and copywriters, we’ll build and
-						extend your brand in digital places.
-					</p>
-					<button class="btn container__tile--btn btn-red">Learn More</button>
-				</div>
-			</section>
-			<section class="container__tiles-row">
-				<div class="container__tile tile-img-text graphic">
-					<h3 class="container__tile--heading">Graphic design</h3>
-					<p class="constiner__tile--text">
-						Great design makes you memorable. We deliver artwork that
-						underscores your brand message and captures potential clients’
-						attention.
-					</p>
-				</div>
-				<div class="container__tile tile-img-text photography">
-					<h3 class="container__tile--heading">Photography</h3>
-					<p class="constiner__tile--text">
-						Increase your credibility by getting the most stunning, high-quality
-						photos that improve your business image.
-					</p>
-				</div>
-			</section>
-		</main>
-		<footer class="footer"></footer>
+			</footer>
+		</div>
+		<script src="./js/app.js"></script>
 	</body>
 </html>

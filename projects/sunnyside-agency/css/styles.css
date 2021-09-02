@@ -14,110 +14,247 @@ html {
 body {
   font-size: 1.8rem;
   font-family: "Barlow", sans-serif;
-  width: 100%;
   min-height: 100vh;
-}
-
-header {
-  padding: 3rem 2rem;
-}
-
-.heading,
-.container,
-.footer {
   width: 100vw;
+  max-width: 100%;
 }
 
-nav[class$="desktop"] {
-  display: none;
+.container {
+  position: relative;
 }
 
-nav[class$="mobile"] {
-  display: flex;
+.btn {
+  background: #fad400;
+  font-family: "Fraunces", serif;
+  text-transform: uppercase;
+  border-radius: 2em;
 }
 
 .hidden {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
 }
 
-@media screen and (min-width: 780px) {
-  nav[class$="mobile"] {
-    display: none;
-  }
-  nav[class$="desktop"] {
-    display: flex;
-  }
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  display: block;
+}
+
+.header .header-logo {
+  width: 50%;
+}
+
+.header .navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 3.2rem 2.5rem;
+}
+
+.header .navbar .menu-list {
+  background: white;
+  align-self: flex-end;
+  flex-grow: 1;
+  width: 80%;
+  text-align: center;
+  position: relative;
+  margin-top: 2rem;
+  padding: 3rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.header .navbar .menu-list::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -15px;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-right: 20px solid white;
+}
+
+.header .navbar .menu-list .menu-items {
+  list-style: none;
+}
+
+.header .navbar .menu-list .menu-item {
+  padding: 1em 0;
+}
+
+.header .navbar .menu-list .menu-item .menu-link {
+  text-decoration: none;
+  color: #a7abae;
+  font-weight: 400;
+  padding: 1em 1.5em;
+}
+
+.header .navbar .menu-list .menu-item .btn {
+  color: #23303e;
+  font-weight: 600;
 }
 
 .hero {
+  background: url("../images/mobile/image-header.jpg");
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url("/projects/sunnyside-agency/images/mobile/image-header.jpg");
-  background-size: cover;
-  background-position: center;
-  color: white;
-  padding-bottom: 15rem;
+  gap: 3rem;
+  padding: 15rem 0;
 }
 
-.hero .heading {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: space-between;
-}
-
-.hero__motto {
-  margin-top: 8rem;
+.hero .hero-title {
   font-family: "Fraunces", serif;
-  font-size: 3.6rem;
+  font-size: 4rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: white;
   text-align: center;
+  letter-spacing: 7px;
+}
+
+.tiles-area {
+  display: flex;
+  flex-direction: column;
+}
+
+.tiles-area .tile {
+  position: relative;
+}
+
+.tiles-area .tile .tile-image img {
+  display: block;
+  width: 100%;
+}
+
+.tiles-area .tile-text-container {
+  padding: 3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tiles-area .tile-text-container .tile-heading {
+  font-family: "Fraunces", serif;
+  text-align: center;
+  font-weight: 900;
+  margin-bottom: 1em;
+  font-size: 3rem;
+}
+
+.tiles-area .tile-text-container .tile-text {
+  text-align: center;
+  font-weight: 700;
+  color: #a7abae;
+  font-size: 1.5rem;
+  line-height: 1.8em;
+  margin-bottom: 1.5em;
+}
+
+.tiles-area .tile-text-container .tile-link {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-family: "Fraunces", serif;
+  color: #23303e;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  position: relative;
+  padding: 0 0.5em;
+}
+
+.tiles-area .tile-text-container .tile-link::after {
+  content: "";
+  display: block;
+  position: relative;
+  transform: translateY(-0.8rem) translateX(-5%);
+  z-index: -1;
+  width: 110%;
+  height: 0.5em;
+  border-radius: 1rem;
+}
+
+.tiles-area .tile-text-container .tile-link.underline-pink::after {
+  background-color: #fe7867;
+  opacity: 0.5;
+}
+
+.tiles-area .tile-text-container .tile-link.underline-yellow::after {
+  background-color: #fad400;
+  opacity: 0.5;
+}
+
+.tiles-area .tile-text-container .tile-link:hover.underline-pink::after {
+  background-color: #fe7867;
+}
+
+.tiles-area .tile-text-container .tile-link:hover.underline-yellow::after {
+  background-color: #fad400;
+}
+
+.tiles-area .tile-image-text {
+  padding-top: 40rem;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.tiles-area .tile-image-text.design {
+  background: url("../images/mobile/image-graphic-design.jpg");
+  background-position: top;
+  background-size: cover;
+  color: #25564b;
+}
+
+.tiles-area .tile-image-text.design .tile-text {
+  color: inherit;
+}
+
+.tiles-area .tile-image-text.photography {
+  background: url("../images/mobile/image-photography.jpg");
+  background-position: top;
+  background-size: cover;
+  color: #19536b;
+}
+
+.tiles-area .tile-image-text.photography .tile-text {
+  color: inherit;
+}
+
+.testimonials {
+  padding: 5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+}
+
+.testimonials .testimonials-header {
+  font-family: "Fraunces", serif;
+  color: #a7abae;
   text-transform: uppercase;
   letter-spacing: 5px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.hero__motto--text {
-  margin-bottom: 7rem;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-}
-
-.container__tile {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  text-align: center;
-}
-
-.container__tile.tile-img img {
-  width: 100%;
-}
-
-.container__tile--heading {
-  font-family: "Fraunces", serif;
-  margin-bottom: 3rem;
-  font-size: 2.8rem;
+  font-size: 1.5rem;
   font-weight: 900;
 }
 
-.container__tile--text {
-  font-size: 1.6rem;
-  line-height: 2.5rem;
-  color: #a7abae;
-  font-weight: 400;
-  letter-spacing: 0.8px;
-}
-
-.container__tile.tile-text {
-  padding: 2rem 3rem;
+.testimonials .testimonial-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
 }
 /*# sourceMappingURL=styles.css.map */

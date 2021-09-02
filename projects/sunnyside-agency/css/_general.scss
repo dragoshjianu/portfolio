@@ -13,34 +13,22 @@ html {
 body {
 	font-size: 1.8rem;
 	font-family: $ff-barlow;
-	width: 100%;
 	min-height: 100vh;
+	width: 100vw;
+	max-width: 100%;
 }
-header {
-	padding: 3rem 2rem;
+.container {
+	position: relative;
 }
 
-.heading,
-.container,
-.footer {
-	width: 100vw;
-}
-nav[class$="desktop"] {
-	display: none;
-}
-nav[class$="mobile"] {
-	display: flex;
+.btn {
+	background: $clr-yellow;
+	font-family: $ff-fraunces;
+	text-transform: uppercase;
+	border-radius: 2em;
 }
 
 .hidden {
-	display: none;
-}
-
-@media screen and (min-width: 780px) {
-	nav[class$="mobile"] {
-		display: none;
-	}
-	nav[class$="desktop"] {
-		display: flex;
-	}
+	visibility: hidden;
+	opacity: 0;
 }
