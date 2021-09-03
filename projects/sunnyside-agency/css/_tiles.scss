@@ -2,22 +2,64 @@
 	display: flex;
 	flex-direction: column;
 
+	@media screen and (min-width: 500px) {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
 	.tile {
 		position: relative;
+
+		&.image-transform {
+			@media screen and (min-width: 500px) {
+				order: 2;
+			}
+		}
+		&.transform {
+			@media screen and (min-width: 500px) {
+				order: 1;
+			}
+		}
+		&.image-stand-out {
+			@media screen and (min-width: 500px) {
+				order: 3;
+			}
+		}
+		&.stand-out {
+			@media screen and (min-width: 500px) {
+				order: 4;
+			}
+		}
+		&.photography {
+			@media screen and (min-width: 500px) {
+				order: 6;
+			}
+		}
+		&.design {
+			@media screen and (min-width: 500px) {
+				order: 5;
+			}
+		}
 		& .tile-image {
-			& img {
+			display: block;
+			& > * {
 				display: block;
 				width: 100%;
 			}
 		}
+		@media screen and (min-width: 500px) {
+			flex: 50%;
+		}
 	}
 
 	.tile-text-container {
-		padding: 3em;
+		// padding: 3em;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		// background-color: hsl(26, 3%, 100);
+		justify-content: center;
+		@media screen and (min-width: 500px) {
+			padding: 0 3em;
+		}
 
 		.tile-heading {
 			font-family: $ff-fraunces;
@@ -70,10 +112,10 @@
 			}
 
 			&:hover.underline-pink::after {
-				background-color: $clr-soft-red;
+				opacity: 1;
 			}
 			&:hover.underline-yellow::after {
-				background-color: $clr-yellow;
+				opacity: 1;
 			}
 		}
 	}
@@ -85,9 +127,16 @@
 
 		&.design {
 			background: url("../images/mobile/image-graphic-design.jpg");
-			background-position: top;
+			background-position: top center;
 			background-size: cover;
 			color: $clr-dark-desaturated-cyan;
+
+			@media screen and (min-width: 500px) {
+				background: url("../images/desktop/image-graphic-design.jpg");
+				background-repeat: no-repeat;
+				background-position: top center;
+				background-size: cover;
+			}
 
 			& .tile-text {
 				color: inherit;
@@ -95,9 +144,16 @@
 		}
 		&.photography {
 			background: url("../images/mobile/image-photography.jpg");
-			background-position: top;
-			background-size: cover;
+			background-position: top center;
+			background-size: contain;
 			color: $clr-dark-blue;
+
+			@media screen and (min-width: 500px) {
+				background: url("../images/desktop/image-photography.jpg");
+				background-repeat: no-repeat;
+				background-position: top center;
+				background-size: cover;
+			}
 			& .tile-text {
 				color: inherit;
 			}

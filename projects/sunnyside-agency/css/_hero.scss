@@ -10,6 +10,15 @@
 	gap: 3rem;
 	padding: 15rem 0;
 
+	@media screen and (min-width: 500px) {
+		background: url("../images/desktop/image-header.jpg");
+
+		background-position: bottom center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		padding-bottom: 40rem;
+	}
+
 	.hero-title {
 		font-family: $ff-fraunces;
 		font-size: 4rem;

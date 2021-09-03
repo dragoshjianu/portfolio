@@ -5,10 +5,6 @@
 	width: 100vw;
 	display: block;
 
-	.header-logo {
-		width: 50%;
-	}
-
 	.navbar {
 		position: absolute;
 		top: 0;
@@ -22,6 +18,20 @@
 		flex-wrap: wrap;
 		padding: 3.2rem 2.5rem;
 
+		@media screen and (min-width: 500px) {
+			flex-wrap: nowrap;
+			padding: 3.2rem 6rem;
+		}
+
+		.header-logo {
+			width: 50%;
+		}
+
+		.toggle-menu {
+			@media screen and (min-width: 500px) {
+				width: 0%;
+			}
+		}
 		.menu-list {
 			background: white;
 			align-self: flex-end;
@@ -33,6 +43,12 @@
 			padding: 3rem;
 			transition: all 0.3s ease-in-out;
 
+			@media screen and (min-width: 500px) {
+				margin: 0;
+				padding: 0;
+				background: none;
+			}
+
 			&::before {
 				content: "";
 				position: absolute;
@@ -41,10 +57,18 @@
 				border-top: 20px solid transparent;
 				border-bottom: 20px solid transparent;
 				border-right: 20px solid white;
+
+				@media screen and (min-width: 500px) {
+					display: none;
+				}
 			}
 
 			.menu-items {
 				list-style: none;
+				@media screen and (min-width: 500px) {
+					display: flex;
+					justify-content: flex-end;
+				}
 			}
 			.menu-item {
 				padding: 1em 0;
@@ -53,10 +77,23 @@
 					color: $clr-grayish-blue;
 					font-weight: 400;
 					padding: 1em 1.5em;
+					@media screen and (min-width: 500px) {
+						color: white;
+					}
 				}
 				.btn {
 					color: $clr-very-dark-desaturated-blue;
 					font-weight: 600;
+					@media screen and (min-width: 500px) {
+						background: white;
+					}
+					&:hover {
+						@media screen and (min-width: 500px) {
+							color: white;
+							background: hsla(0, 0%, 100%, 0.3);
+							background-blend-mode: lighten;
+						}
+					}
 				}
 			}
 		}
