@@ -1,0 +1,163 @@
+// # Front-end Style Guide
+
+// ## Layout
+
+// The designs were created to the following widths:
+
+// - Mobile: 375px
+// - Desktop: 1440px
+
+// ## Colors
+
+// ### Primary
+
+// - Dark Blue: hsl(233, 26%, 24%)
+// - Lime Green: hsl(136, 65%, 51%)
+// - Bright Cyan: hsl(192, 70%, 51%)
+
+// ### Neutral
+
+// - Grayish Blue: hsl(233, 8%, 62%)
+// - Light Grayish Blue: hsl(220, 16%, 96%)
+// - Very Light Gray: hsl(0, 0%, 98%)
+// - White: hsl(0, 0%, 100%)
+
+// ## Typography
+
+// ### Body Copy
+
+// - Font size: 18px
+
+// ### Font
+
+// - Family: [Public Sans](https://fonts.google.com/specimen/Public+Sans)
+// - Weights: 300, 400, 700
+
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap");
+
+// Variables
+$clr-dark-blue: hsl(233, 26%, 24%);
+$clr-lime-green: hsl(136, 65%, 51%);
+$clr-bright-cyan: hsl(192, 70%, 51%);
+$clr-grayish-blue: hsl(233, 8%, 62%);
+$clr-light-grayish-blue: hsl(220, 16%, 96%);
+$clr-very-light-gray: hsl(0, 0%, 98%);
+$clr-white: hsl(0, 0%, 100%);
+
+$ff-public: "Public Sans", sans-serif;
+
+$fs-normal: 1.8rem;
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: $ff-public;
+	font-size: $fs-normal;
+	color: $clr-grayish-blue;
+	background: $clr-very-light-gray;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	line-height: 1.3;
+}
+
+p {
+	line-height: 1.6;
+}
+
+img {
+	max-width: 100%;
+}
+
+.container {
+	padding: 0 2rem;
+}
+.hidden {
+	display: none;
+}
+.btn {
+	display: inline-block;
+	color: $clr-white;
+	background-image: linear-gradient(
+		to right,
+		$clr-lime-green,
+		$clr-bright-cyan
+	);
+	padding: 1em 2em;
+	border-radius: 4em;
+	text-decoration: none;
+}
+.lg-screen-only {
+	display: none;
+}
+
+.header {
+	position: relative;
+	z-index: 1;
+	background-color: $clr-white;
+	.navbar {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 2rem 0;
+
+		.logo {
+			.logo-image {
+			}
+		}
+		.toggle-menu {
+		}
+		.menu-list {
+			display: none;
+			.menu-item {
+				.menu-link {
+				}
+			}
+		}
+	}
+}
+
+.main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	.hero {
+		position: relative;
+		background-image: url("../images/bg-intro-mobile.svg");
+		background-position: right -40%;
+		background-repeat: no-repeat;
+		padding-bottom: 10rem;
+
+		.mockup {
+			&-image {
+				width: 100%;
+				height: 100%;
+				position: relative;
+				z-index: 0;
+				transform: translateY(-29%);
+				margin-bottom: -29%;
+			}
+		}
+
+		.hero-text {
+			text-align: center;
+			.hero-heading {
+				color: $clr-dark-blue;
+				font-weight: 400;
+				font-size: 3.6rem;
+			}
+		}
+	}
+}
