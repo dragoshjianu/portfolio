@@ -71,3 +71,8 @@ img {
 	font-weight: 700;
 	color: $clr-black;
 }
+
+.disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}

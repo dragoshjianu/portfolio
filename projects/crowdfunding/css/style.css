@@ -73,4 +73,19 @@ img {
   font-weight: 700;
   color: black;
 }
+
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.header {
+  padding: 2rem 3rem 0 3rem;
+  max-width: 80%;
+}
+
+.header .navbar {
+  display: flex;
+  justify-content: space-between;
+}
 /*# sourceMappingURL=style.css.map */
