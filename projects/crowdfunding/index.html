@@ -16,6 +16,37 @@
 		<title>Crowdfunding product page - by Dragos Jianu</title>
 	</head>
 	<body>
+		<div class="overlay"></div>
+		<div class="modals">
+			<section class="modal card thank-you">
+				<div class="thank-you-image">
+					<img src="./images/icon-check.svg" alt="Thank you for your support" />
+				</div>
+				<h2 class="thank-you-heading">Thank you for your support</h2>
+				<p class="thank-you-text">
+					Your pledge brings us one step closer to sharing Mastercraft Bamboo
+					Monitor Riser worldwide. You will get an email once our campaign is
+					completed.
+				</p>
+				<a href="#" class="button primary-btn"> Got it! </a>
+			</section>
+			<section class="card modal choose">
+				<div class="choose-content">
+					<h2 class="choose-title">Back this project</h2>
+					<div class="close-image">
+						<img
+							src="./images/icon-close-modal.svg"
+							alt="Close modal with back project"
+						/>
+					</div>
+					<p class="choose-text">
+						Want to support us in bringing Mastercraft Bamboo Monitor Riser out
+						in the world?
+					</p>
+				</div>
+			</section>
+		</div>
+
 		<header class="header">
 			<nav class="navbar">
 				<div class="logo-image">
@@ -23,6 +54,18 @@
 				</div>
 
 				<div class="menu-container">
+					<a href="#" class="toggle-menu opened">
+						<img
+							src="./images/icon-hamburger.svg"
+							alt="Open menu"
+							class="toggle-menu-image"
+						/>
+						<img
+							src="./images/icon-close-menu.svg"
+							alt="Open menu"
+							class="toggle-menu-image"
+						/>
+					</a>
 					<ul class="menu-list">
 						<li class="menu-item"><a href="#" class="menu-link">Home</a></li>
 						<li class="menu-item">
@@ -48,15 +91,18 @@
 					<div class="buttons-area">
 						<a href="#" class="button primary-btn">Back this project</a>
 						<a href="#" class="button bookmark">
-							<span class="bookmark-icon">
-								<svg width="56" height="56" xmlns="http://www.w3.org/2000/svg">
-									<g fill="none" fill-rule="evenodd">
-										<circle fill="#2F2F2F" cx="28" cy="28" r="28" />
-										<path fill="#B1B1B1" d="M23 19v18l5-5.058L33 37V19z" />
-									</g>
-								</svg>
-							</span>
-							Bookmark
+							<svg
+								class="bookmark-icon"
+								width="56"
+								height="56"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<g fill="none" fill-rule="evenodd">
+									<circle fill="#2F2F2F" cx="28" cy="28" r="28" />
+									<path fill="#B1B1B1" d="M23 19v18l5-5.058L33 37V19z" />
+								</g>
+							</svg>
+							<span>Bookmark</span>
 						</a>
 					</div>
 				</section>
@@ -75,9 +121,7 @@
 							<p class="sub-stat">days left</p>
 						</div>
 					</div>
-					<div class="stats-progress-bar">
-						<progress max="100000" value="89914"></progress>
-					</div>
+					<div class="stats-progress-bar"></div>
 				</section>
 
 				<section class="card about">
@@ -141,7 +185,7 @@
 								<span class="highlighted">0</span>
 								left
 							</p>
-							<a href="#" class="button grayed-btn disabled">Select Reward</a>
+							<a href="#" class="button grayed-btn disabled">Out of stock</a>
 						</div>
 					</div>
 				</section>
