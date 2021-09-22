@@ -24,6 +24,10 @@ body {
 	@media (min-width: 700px) {
 		font-size: 1rem;
 	}
+
+	&.blocked {
+		overflow: hidden;
+	}
 }
 
 h1,
@@ -53,6 +57,13 @@ img {
 	max-width: 100%;
 }
 
+fieldset {
+	border: none;
+	margin-inline: 0;
+	padding-inline: 0;
+	padding-block: 0;
+}
+
 .main {
 	position: relative;
 	@media (min-width: 700px) {
@@ -70,8 +81,8 @@ img {
 }
 .card {
 	display: block;
-	margin: 1.5rem 0;
-	padding: 2rem 1.5rem;
+	margin: 0.5rem 0;
+	padding: 2rem 1rem;
 	background-color: hsl(0, 0%, 100%);
 	border-radius: 0.5rem;
 
@@ -123,4 +134,8 @@ img {
 .disabled {
 	opacity: 0.5;
 	cursor: not-allowed;
+}
+
+.bordered {
+	border: 2px solid $clr-primary !important;
 }
