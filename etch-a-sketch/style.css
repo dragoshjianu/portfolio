@@ -1,0 +1,81 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.main {
+	display: grid;
+	place-items: center;
+}
+
+.header {
+	text-align: center;
+	padding: 3em 0;
+}
+
+.buttons {
+	margin: 3em auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.btn {
+	display: inline-block;
+	padding: 1em 2em;
+	background-color: transparent;
+	font-size: 1.125rem;
+	font-family: "Courier New", Courier, monospace;
+	font-weight: 700;
+	border-radius: 0.5em;
+	margin: 0 0.4em;
+}
+
+.btn:hover {
+	color: white;
+	background-color: #4f4f4f;
+}
+
+fieldset {
+	border: none;
+	position: relative;
+}
+
+.color-input {
+	width: 5em;
+	height: 3em;
+}
+
+.grid-size-fieldset {
+	align-self: flex-end;
+}
+
+.grid-size-label span {
+	width: 2em;
+	text-align: center;
+	line-height: 2rem;
+	text-align: center;
+	background: #03a9f4;
+	color: #fff;
+	font-size: 1.125rem;
+	display: block;
+	position: absolute;
+	left: 50%;
+	top: -2.5rem;
+	transform: translate(-50%, 0);
+	border-radius: 6px;
+}
+
+.grid-container {
+	display: grid;
+	width: 640px;
+	height: 640px;
+	border: 2px solid black;
+}
+
+.cell {
+	border: 1px solid black;
+}

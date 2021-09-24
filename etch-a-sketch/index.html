@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div class="container">
+			<header class="header">
+				<h2 class="title">Etch a Scketh</h2>
+			</header>
+			<main class="main">
+				<div class="buttons">
+					<fieldset class="color-filedset">
+						<label class="color-label" for="color-input"></label>
+						<input
+							type="color"
+							name="color-input"
+							class="color-input"
+							value="#000000"
+						/>
+					</fieldset>
+					<button class="btn monochrome">Monochrome</button>
+					<button class="btn rainbow">Rainbow</button>
+					<button class="btn color">Color</button>
+					<button class="btn erase">Erase</button>
+					<button class="btn clear">Clear</button>
+					<fieldset class="grid-size-fieldset">
+						<label class="grid-size-label" for="grid-size-input">
+							<span>16</span>
+						</label>
+						<input
+							type="range"
+							name="grid-size-input"
+							min="4"
+							max="64"
+							step="1"
+							class="gird-size-input"
+						/>
+					</fieldset>
+				</div>
+				<div class="grid-container" id="grid-container"></div>
+			</main>
+		</div>
+
+		<script src="app.js"></script>
+	</body>
+</html>
