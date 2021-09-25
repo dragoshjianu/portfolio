@@ -1,0 +1,283 @@
+.header {
+	padding: 2rem 2rem 0 2rem;
+	width: 100%;
+	height: 20vh;
+	background-image: url("../images/image-hero-mobile.jpg");
+	background-size: cover;
+	background-position-x: center;
+	background-position-y: 60%;
+
+	@media (min-width: 700px) {
+		padding: 2rem 8rem 0 8rem;
+		height: 35vh;
+		background-image: url("../images/image-hero-desktop.jpg");
+		background-position-x: center;
+	}
+
+	.navbar {
+		display: flex;
+		justify-content: space-between;
+
+		.logo-image {
+		}
+		.menu-container {
+			.toggle-menu {
+				display: flex;
+				width: 1rem;
+				height: 1rem;
+				overflow: hidden;
+				@media (min-width: 700px) {
+					display: none;
+				}
+
+				& .toggle-menu-image {
+					transform: translateX(0);
+					transition: all 0.5s ease;
+				}
+
+				&.opened .toggle-menu-image {
+					transform: translateX(-1rem);
+				}
+			}
+
+			.menu-list {
+				display: none;
+				list-style: none;
+				@media (min-width: 700px) {
+					display: flex;
+					gap: 2rem;
+				}
+				.menu-item {
+					.menu-link {
+						color: #fff;
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+.main {
+	.title {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		position: relative;
+		.title-image {
+			position: absolute;
+			top: -1.5rem;
+		}
+		.title-heading {
+			margin: 1.5rem 0;
+			font-size: 1.2rem;
+			letter-spacing: -0.05em;
+			text-align: center;
+
+			@media (min-width: 700px) {
+				font-size: 1.7rem;
+			}
+		}
+		.subtitle {
+			margin-bottom: 2rem;
+			font-size: 0.8rem;
+			font-weight: 500;
+			letter-spacing: -0.05em;
+			text-align: center;
+			@media (min-width: 700px) {
+				font-size: 1rem;
+			}
+		}
+		.buttons-area {
+			display: flex;
+			justify-content: space-evenly;
+			width: 100%;
+
+			@media (min-width: 700px) {
+				justify-content: space-between;
+			}
+
+			.bookmark,
+			.bookmarked {
+				display: flex;
+				align-items: center;
+				padding: 0;
+
+				@media (min-width: 700px) {
+					padding: 0 3rem 0 0;
+					background-color: $clr-light-grey;
+					color: $clr-dark-grey;
+				}
+
+				& span {
+					display: none;
+					@media (min-width: 700px) {
+						display: inline-block;
+					}
+				}
+
+				&:hover .bookmark-icon {
+					opacity: 0.5;
+				}
+			}
+			.bookmark-icon {
+				@media (min-width: 700px) {
+					margin-right: 1rem;
+				}
+			}
+
+			.bookmarked {
+				color: $clr-primary;
+				background-color: $clr-light-grey;
+
+				circle {
+					fill: $clr-primary;
+				}
+				path {
+					fill: #fff;
+				}
+			}
+		}
+	}
+
+	.stats {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		.absolute-stats-content {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			width: 100%;
+			.stat {
+				display: block;
+				padding: 0.5rem 0;
+				width: 100%;
+
+				@media (min-width: 700px) {
+					text-align: left;
+					padding: 0rem;
+					height: 100%;
+				}
+
+				& + .stat {
+					@media (min-width: 700px) {
+						padding-left: 3rem;
+						border-left: 2px solid $clr-light-grey;
+					}
+				}
+
+				&:not(:last-of-type)::after {
+					content: "";
+					display: block;
+					margin: 0 auto;
+					margin-top: 1.5rem;
+					width: 30%;
+					height: 1px;
+					background-color: $clr-light-grey;
+
+					@media (min-width: 700px) {
+						content: none;
+					}
+				}
+				.absolute-stat {
+				}
+				.sub-stat {
+				}
+			}
+
+			@media (min-width: 700px) {
+				flex-direction: row;
+			}
+		}
+		.stats-progress-bar {
+			position: relative;
+			margin-top: 2rem;
+			width: 100%;
+			height: 1rem;
+			background-color: $clr-light-grey;
+			border-radius: 1rem;
+		}
+
+		.stats-progress-bar::before {
+			content: "";
+			display: flex;
+			align-items: center;
+			position: absolute;
+			left: 0rem;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			width: 88%;
+			height: 1rem;
+			min-width: 1rem;
+			max-width: calc(100% - 0.3rem);
+			background-color: $clr-primary;
+			border-radius: 1em;
+		}
+	}
+
+	.about {
+		line-height: 1.7;
+		.about-content {
+			.about-title {
+				margin-bottom: 1rem;
+			}
+			.about-text {
+			}
+		}
+
+		.products {
+			display: block;
+			.product {
+				display: block;
+
+				@media (min-width: 700px) {
+					display: grid;
+					grid-template-areas:
+						"title . cost"
+						"desc desc desc"
+						"stock . button";
+				}
+				.product-title {
+					font-size: 1rem;
+					@media (min-width: 700px) {
+						grid-area: title;
+					}
+				}
+				.product-cost {
+					margin-bottom: 1.5rem;
+					font-size: 0.9rem;
+					font-weight: 500;
+					color: $clr-primary;
+					@media (min-width: 700px) {
+						grid-area: cost;
+						place-self: end;
+					}
+				}
+				.product-text {
+					margin-bottom: 1.5rem;
+					@media (min-width: 700px) {
+						grid-area: desc;
+					}
+				}
+				.stock {
+					display: flex;
+					align-items: center;
+					gap: 0.3rem;
+					margin-bottom: 1rem;
+					@media (min-width: 700px) {
+						grid-area: stock;
+						margin: 0;
+					}
+				}
+				.button {
+					@media (min-width: 700px) {
+						grid-area: button;
+					}
+				}
+			}
+		}
+	}
+}

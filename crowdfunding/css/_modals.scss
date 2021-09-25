@@ -1,0 +1,197 @@
+.overlay {
+	display: block;
+	position: fixed;
+	z-index: 1;
+	width: 100vw;
+	height: 100vh;
+	background-color: hsla(0, 0%, 0%, 0.6);
+}
+
+.modals {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	z-index: 2;
+	width: 100vw;
+	height: 100vh;
+
+	.modal {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1rem;
+		max-width: 300px;
+		max-height: calc(100vh - 10%);
+		overflow: auto;
+
+		@media (min-width: 700px) {
+			max-width: 750px;
+		}
+
+		&.thank-you {
+			display: none;
+			text-align: center;
+		}
+
+		&.choose {
+			.choose-content {
+				position: relative;
+				.choose-title {
+					margin-bottom: 2rem;
+				}
+				.choose-image {
+					position: absolute;
+					top: 5%;
+					right: 5%;
+				}
+				.choose-text {
+				}
+			}
+
+			.choose-product {
+				@media (min-width: 700px) {
+					display: grid;
+					grid-template-areas:
+						"select-product select-product stock "
+						"description description description"
+						"input-area input-area input-area";
+				}
+				.select-product {
+					margin-bottom: 2rem;
+
+					@media (min-width: 700px) {
+						grid-area: select-product;
+					}
+
+					&-content {
+						display: inline-block;
+					}
+					&-label {
+						display: flex;
+
+						align-items: center;
+						gap: 0.75rem;
+					}
+					&-input {
+						display: none;
+
+						& + *::before {
+							content: "";
+							display: inline-block;
+							vertical-align: bottom;
+							width: 1rem;
+							height: 1rem;
+							margin-right: 0.3rem;
+							border-radius: 50%;
+							border-style: solid;
+							border-width: 0.1rem;
+							border-color: gray;
+						}
+
+						&:checked + * {
+							color: $clr-primary;
+						}
+						&:checked + *::before {
+							background: radial-gradient(
+								$clr-primary 0%,
+								$clr-primary 40%,
+								transparent 50%,
+								transparent
+							);
+							border-color: teal;
+						}
+					}
+
+					&-text {
+						display: block;
+						font-size: 1rem;
+						font-weight: 700;
+						color: $clr-black;
+					}
+					&-cost {
+						display: block;
+						color: $clr-primary;
+					}
+				}
+				.choose-text {
+					line-height: 1.3rem;
+					@media (min-width: 700px) {
+						grid-area: description;
+					}
+				}
+				.stock {
+					@media (min-width: 700px) {
+						grid-area: stock;
+						justify-self: center;
+					}
+				}
+
+				.pledge-input-area {
+					display: none;
+					@media (min-width: 700px) {
+						grid-area: input-area;
+					}
+					input,
+					button {
+						border: none;
+						outline: none;
+					}
+					.pledge-pay-area {
+						border-top: 1px solid $clr-dark-grey;
+						margin-top: 1rem;
+						padding-top: 2rem;
+
+						.pledge-pay-label {
+							display: grid;
+							grid-template-areas:
+								"labels labels"
+								"inputs buttons";
+							grid-gap: 0.5rem;
+
+							@media (min-width: 700px) {
+								grid-template-areas: "labels inputs buttons";
+								grid-template-columns: 2fr 1fr 1fr;
+							}
+						}
+						.pledge-pay-text {
+							grid-area: labels;
+							place-self: center;
+							margin-bottom: 1rem;
+							@media (min-width: 700px) {
+								justify-self: flex-start;
+							}
+						}
+						.pledge-pay-input-area {
+							grid-area: inputs;
+							display: flex;
+							place-self: center;
+							position: relative;
+							padding: 0.75rem;
+							max-width: 7rem;
+							height: 3rem;
+							border: 2px solid $clr-light-grey;
+							border-radius: 2rem;
+
+							.pledge-pay-input-icon {
+								width: 1.5rem;
+								height: 1.5rem;
+							}
+
+							.pledge-pay-input {
+								max-width: 80%;
+								font-size: 1rem;
+								font-weight: 700;
+							}
+						}
+
+						.pledge-pay-button {
+							grid-area: buttons;
+							place-self: center;
+						}
+					}
+				}
+			}
+		}
+	}
+}
