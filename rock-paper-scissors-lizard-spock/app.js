@@ -168,9 +168,9 @@ const scores = {
 //Get dynamicaly options from DOM
 const getOptions = () => {
 	let allOptions = [];
-	choices.forEach((choise) => {
-		choise = choices.dataset.option;
-		allOptions.push(choise);
+	choices.forEach((choice) => {
+		chosen = choice.dataset.option;
+		allOptions.push(chosen);
 	});
 	return allOptions;
 };
@@ -179,6 +179,7 @@ const getOptions = () => {
 const getComputerChoice = () => {
 	const random = Math.floor(Math.random() * getOptions().length);
 	const allOptions = getOptions();
+	console.log(allOptions);
 	return allOptions[random];
 };
 
